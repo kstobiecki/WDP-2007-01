@@ -13,7 +13,7 @@
     "refactor": "run-s refactor:*",
     "refactor:format": "prettier --write \"src/**/*.{js,html,scss}\"",
     "refactor:lint": "eslint src/",
-    "build": "react-scripts build",
+    "build": "CI= react-scripts build",
     "test": "react-scripts test --noStackTrace",
     "test-all": "react-scripts test --watchAll=false --noStackTrace",
     "test-related": "react-scripts test --watchAll=false --noStackTrace --findRelatedTests",
