@@ -79,6 +79,10 @@
     .price {
       display: flex;
     }
+
+    .oldPrice {
+      text-decoration: line-through;
+    }
   }
 
   &:hover {
