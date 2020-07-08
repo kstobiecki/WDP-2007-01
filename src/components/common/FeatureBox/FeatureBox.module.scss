@@ -75,4 +75,19 @@
       color: $primary;
     }
   }
+
+  &:hover {
+    .iconWrapper {
+      color: #ffffff;
+
+      &::after {
+        background-color: $primary;
+        border-color: $primary;
+      }
+    }
+
+    .content {
+      color: $primary;
+    }
+  }
 }
