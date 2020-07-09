@@ -15,16 +15,19 @@ const ProductSearch = () => (
           Select a category
           <ul className={styles.dropdownContent}>
             <li className={styles.droped}>
-              <a href=''>Ferniture</a>
+              <a href=''>Bed</a>
             </li>
             <li className={styles.droped}>
               <a href=''>Chair</a>
             </li>
             <li className={styles.droped}>
+              <a href=''>Sofa</a>
+            </li>
+            <li className={styles.droped}>
               <a href=''>Table</a>
             </li>
             <li className={styles.droped}>
-              <a href=''>Sofa</a>
+              <a href=''>Dining</a>
             </li>
           </ul>
         </li>
