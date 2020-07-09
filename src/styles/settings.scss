@@ -32,3 +32,15 @@ $text-color: $colorDark;
 $form-border-color: $colorGray;
 $form-border-color-gray: $colorLightGray;
 $form-border-color-soft: $colorSoftGray;
+
+
+//HOVER ANIMATIONS
+//variables
+$background-color-transition: 250ms;
+$color-transition: 250ms;
+$border-color-transition: 250ms;
+
+%hoverAnimation {
+  transition: background-color $background-color-transition linear, color $color-transition linear, border-color $border-color-transition linear;
+  transform: translate(0, 0);
+} 

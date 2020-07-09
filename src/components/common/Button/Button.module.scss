@@ -15,6 +15,7 @@
     color: $main-light !important;
     background-color: $primary;
     text-decoration: none;
+    @extend %hoverAnimation;
   }
 }
 
@@ -37,6 +38,7 @@
   &:not(.noHover):hover {
     background-color: $footer-claim-bg;
     color: $main-light;
+    @extend %hoverAnimation;
   }
 
   &.active {
