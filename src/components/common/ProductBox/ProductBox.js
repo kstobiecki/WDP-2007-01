@@ -11,54 +11,78 @@ import {
 import { faStar as farStar, faHeart } from '@fortawesome/free-regular-svg-icons';
 import Button from '../Button/Button';
 
-const ProductBox = ({ name, price, oldPrice, promo, stars, favorite, compare }) => (
-  <div className={styles.root}>
-    <div className={styles.photo}>
-      {promo && <div className={styles.sale}>{promo}</div>}
-      <div className={styles.buttons}>
-        <Button variant='small'>Quick View</Button>
-        <Button variant='small'>
-          <FontAwesomeIcon icon={faShoppingBasket}></FontAwesomeIcon> ADD TO CART
-        </Button>
-      </div>
-    </div>
-    <div className={styles.content}>
-      <h5>{name}</h5>
-      <div className={styles.stars}>
-        {[1, 2, 3, 4, 5].map(i => (
-          <a key={i} href='#'>
-            {i <= stars ? (
-              <FontAwesomeIcon icon={faStar}>{i} stars</FontAwesomeIcon>
-            ) : (
-              <FontAwesomeIcon icon={farStar}>{i} stars</FontAwesomeIcon>
-            )}
-          </a>
-        ))}
-      </div>
-    </div>
-    <div className={styles.line}></div>
-    <div className={styles.actions}>
-      <div className={styles.outlines}>
-        <Button variant='outline' active={favorite}>
-          <FontAwesomeIcon icon={faHeart}>Favorite</FontAwesomeIcon>
-        </Button>
-        <Button variant='outline' active={compare}>
-          <FontAwesomeIcon icon={faExchangeAlt}>Add to compare</FontAwesomeIcon>
-        </Button>
-      </div>
-      <div className={styles.price}>
-        {!oldPrice ? null : (
-          <Button className={styles.oldPrice} noHover variant='small'>
-            $ {oldPrice}
+function ProductBox({
+  name,
+  price,
+  oldPrice,
+  promo,
+  stars,
+  favorite,
+  compare,
+  updateFavoriteStatus,
+  id,
+}) {
+  const handleSwitchButton = (favorite, id, event) => {
+    event.preventDefault();
+
+    favorite = !favorite;
+
+    updateFavoriteStatus(favorite, id);
+  };
+
+  return (
+    <div className={styles.root}>
+      <div className={styles.photo}>
+        {promo && <div className={styles.sale}>{promo}</div>}
+        <div className={styles.buttons}>
+          <Button variant='small'>Quick View</Button>
+          <Button variant='small'>
+            <FontAwesomeIcon icon={faShoppingBasket}></FontAwesomeIcon> ADD TO CART
           </Button>
-        )}
-        <Button className={styles.priceHover} noHover variant='small'>
-          $ {price}
-        </Button>
+        </div>
+      </div>
+      <div className={styles.content}>
+        <h5>{name}</h5>
+        <div className={styles.stars}>
+          {[1, 2, 3, 4, 5].map(i => (
+            <a key={i} href='#'>
+              {i <= stars ? (
+                <FontAwesomeIcon icon={faStar}>{i} stars</FontAwesomeIcon>
+              ) : (
+                <FontAwesomeIcon icon={farStar}>{i} stars</FontAwesomeIcon>
+              )}
+            </a>
+          ))}
+        </div>
+      </div>
+      <div className={styles.line}></div>
+      <div className={styles.actions}>
+        <div className={styles.outlines}>
+          <Button
+            variant='outline'
+            active={favorite}
+            onClick={event => handleSwitchButton(favorite, id, event)}
+          >
+            <FontAwesomeIcon icon={faHeart}>Favorite</FontAwesomeIcon>
+          </Button>
+          <Button variant='outline' active={compare}>
+            <FontAwesomeIcon icon={faExchangeAlt}>Add to compare</FontAwesomeIcon>
+          </Button>
+        </div>
+        <div className={styles.price}>
+          {!oldPrice ? null : (
+            <Button className={styles.oldPrice} noHover variant='small'>
+              $ {oldPrice}
+            </Button>
+          )}
+          <Button className={styles.priceHover} noHover variant='small'>
+            $ {price}
+          </Button>
+        </div>
       </div>
     </div>
-  </div>
-);
+  );
+}
 
 ProductBox.propTypes = {
   children: PropTypes.node,
@@ -69,6 +93,8 @@ ProductBox.propTypes = {
   stars: PropTypes.number,
   favorite: PropTypes.bool,
   compare: PropTypes.bool,
+  updateFavoriteStatus: PropTypes.func,
+  id: PropTypes.string,
 };
 
 export default ProductBox;
