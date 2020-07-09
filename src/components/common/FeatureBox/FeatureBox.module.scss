@@ -30,6 +30,7 @@
       border-radius: 100%;
       background-color: $main-light;
       z-index: -1;
+      @extend %hoverAnimation;
     }
 
     &::after {
@@ -42,6 +43,7 @@
       left: 50%;
       transform: translate(-50%, -50%);
       border: 1px solid $form-border-color-gray;
+      @extend %hoverAnimation;
     }
   }
 
