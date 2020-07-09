@@ -10,7 +10,7 @@ const CompanyClaim = () => (
   <div className={styles.root}>
     <div className='container'>
       <div className='row align-items-center'>
-        <div className={`col text-left ${styles.phoneNumber}`}>
+        <div className={`col text-left col-sm text-right ${styles.phoneNumber}`}>
           <p>
             <FontAwesomeIcon className={styles.icon} icon={faMobileAlt} /> 2300 - 3560 -
             222
@@ -26,7 +26,7 @@ const CompanyClaim = () => (
             <div className={styles.cartIcon}>
               <FontAwesomeIcon className={styles.icon} icon={faShoppingBasket} />
             </div>
-            <div className={styles.cartCounter}>0</div>
+            <div className={styles.cartCounter}>99999</div>
           </a>
         </div>
       </div>

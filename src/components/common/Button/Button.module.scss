@@ -38,4 +38,9 @@
     background-color: $footer-claim-bg;
     color: $main-light;
   }
+
+  &.active {
+    background-color: $primary;
+    color: #ffffff;
+  }
 }

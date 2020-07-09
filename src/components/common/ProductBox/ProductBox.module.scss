@@ -31,6 +31,7 @@
     .buttons {
       display: flex;
       justify-content: space-between;
+      visibility: hidden;
     }
   }
 
@@ -74,5 +75,25 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    .price {
+      display: flex;
+    }
+
+    .oldPrice {
+      text-decoration: line-through;
+    }
+  }
+
+  &:hover {
+    .buttons {
+      display: flex;
+      justify-content: space-between;
+      visibility: initial;
+    }
+
+    .priceHover {
+      background-color: $primary;
+    }
   }
 }
