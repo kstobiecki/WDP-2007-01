@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { createRef } from 'react';
 import PropTypes from 'prop-types';
 
 import styles from './NewFurniture.module.scss';
@@ -10,12 +10,23 @@ class NewFurniture extends React.Component {
     activeCategory: 'bed',
   };
 
+  constructor(props) {
+    super(props);
+    this.rowRef = createRef();
+  }
+
   handlePageChange(newPage) {
-    this.setState({ activePage: newPage });
+    this.rowRef.current.className = 'row fade';
+    setTimeout(() => {
+      this.setState({ activePage: newPage });
+    }, 200);
   }
 
   handleCategoryChange(newCategory) {
-    this.setState({ activeCategory: newCategory });
+    this.rowRef.current.className = 'row fade';
+    setTimeout(() => {
+      this.setState({ activeCategory: newCategory });
+    }, 200);
   }
 
   render() {
@@ -37,6 +48,10 @@ class NewFurniture extends React.Component {
           </a>
         </li>
       );
+    }
+
+    if (this.rowRef.current) {
+      this.rowRef.current.className = 'row fade show';
     }
 
     return (
@@ -66,7 +81,7 @@ class NewFurniture extends React.Component {
               </div>
             </div>
           </div>
-          <div className='row'>
+          <div ref={this.rowRef} className='row fade show'>
             {categoryProducts.slice(activePage * 8, (activePage + 1) * 8).map(item => (
               <div
                 key={item.id}
