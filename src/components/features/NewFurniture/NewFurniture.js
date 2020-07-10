@@ -1,8 +1,8 @@
-import React from 'react';
+import React, { createRef } from 'react';
 import PropTypes from 'prop-types';
 
 import styles from './NewFurniture.module.scss';
-import ProductBox from '../../common/ProductBox/ProductBox';
+import ProductBox from '../../common/ProductBox/ProductBoxContainer';
 
 class NewFurniture extends React.Component {
   state = {
@@ -10,12 +10,23 @@ class NewFurniture extends React.Component {
     activeCategory: 'bed',
   };
 
+  constructor(props) {
+    super(props);
+    this.rowRef = createRef();
+  }
+
   handlePageChange(newPage) {
-    this.setState({ activePage: newPage });
+    this.rowRef.current.className = 'row fade';
+    setTimeout(() => {
+      this.setState({ activePage: newPage });
+    }, 200);
   }
 
   handleCategoryChange(newCategory) {
-    this.setState({ activeCategory: newCategory });
+    this.rowRef.current.className = 'row fade';
+    setTimeout(() => {
+      this.setState({ activeCategory: newCategory });
+    }, 200);
   }
 
   render() {
@@ -28,15 +39,19 @@ class NewFurniture extends React.Component {
     const dots = [];
     for (let i = 0; i < pagesCount; i++) {
       dots.push(
-        <li>
+        <li key={i}>
           <a
             onClick={() => this.handlePageChange(i)}
-            className={i === activePage && styles.active}
+            className={i === activePage ? styles.active : ''}
           >
             page {i}
           </a>
         </li>
       );
+    }
+
+    if (this.rowRef.current) {
+      this.rowRef.current.className = 'row fade show';
     }
 
     return (
@@ -52,7 +67,7 @@ class NewFurniture extends React.Component {
                   {categories.map(item => (
                     <li key={item.id}>
                       <a
-                        className={item.id === activeCategory && styles.active}
+                        className={item.id === activeCategory ? styles.active : ''}
                         onClick={() => this.handleCategoryChange(item.id)}
                       >
                         {item.name}
@@ -66,9 +81,12 @@ class NewFurniture extends React.Component {
               </div>
             </div>
           </div>
-          <div className='row'>
+          <div ref={this.rowRef} className='row fade show'>
             {categoryProducts.slice(activePage * 8, (activePage + 1) * 8).map(item => (
-              <div key={item.id} className='col-3'>
+              <div
+                key={item.id}
+                className='col-12 col-lg-4 col-md-6 col-sm-12 col-xl-3'
+              >
                 <ProductBox {...item} />
               </div>
             ))}

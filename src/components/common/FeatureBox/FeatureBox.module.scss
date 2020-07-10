@@ -1,7 +1,7 @@
 @import "../../../styles/settings.scss";
 
 .root {
-  border: 1px solid #b6b6b6;
+  border: 1px solid $form-border-color-gray;
   text-align: center;
   margin-top: 40px;
 
@@ -20,7 +20,7 @@
 
     &::before {
       content: "";
-      border: 1px solid #b6b6b6;
+      border: 1px solid $form-border-color-gray;
       position: absolute;
       top: 50%;
       left: 50%;
@@ -28,8 +28,9 @@
       width: 76px;
       height: 76px;
       border-radius: 100%;
-      background-color: #ffffff;
+      background-color: $main-light;
       z-index: -1;
+      @extend %hoverAnimation;
     }
 
     &::after {
@@ -41,7 +42,8 @@
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
-      border: 1px solid #b6b6b6;
+      border: 1px solid $form-border-color-gray;
+      @extend %hoverAnimation;
     }
   }
 
@@ -60,7 +62,22 @@
 
   &.active {
     .iconWrapper {
-      color: #ffffff;
+      color: $main-light;
+
+      &::after {
+        background-color: $primary;
+        border-color: $primary;
+      }
+    }
+
+    .content {
+      color: $primary;
+    }
+  }
+
+  &:hover {
+    .iconWrapper {
+      color: $main-light;
 
       &::after {
         background-color: $primary;
