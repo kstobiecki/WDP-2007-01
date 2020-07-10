@@ -1,10 +1,10 @@
 import { connect } from 'react-redux';
 
-import ProductBox from './ProductBox';
+import Ratings from './Ratings';
 
 import { getAll } from '../../../redux/categoriesRedux.js';
 import { getNew } from '../../../redux/productsRedux.js';
-import { updateFavoriteStatus, rateProduct } from '../../../redux/productsRedux.js';
+import { rateProduct } from '../../../redux/productsRedux.js';
 
 const mapStateToProps = state => ({
   categories: getAll(state),
@@ -12,13 +12,13 @@ const mapStateToProps = state => ({
 });
 
 const mapDispatchToProps = dispatch => ({
-  updateFavoriteStatus: (favorite, id) =>
+  rateProduct: (stars, id) =>
     dispatch(
-      updateFavoriteStatus({
-        favorite: favorite,
+      rateProduct({
+        userStars: stars,
         id: id,
       })
     ),
 });
 
-export default connect(mapStateToProps, mapDispatchToProps)(ProductBox);
+export default connect(mapStateToProps, mapDispatchToProps)(Ratings);

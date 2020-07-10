@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 
 import styles from './ProductBox.module.scss';
@@ -10,6 +10,8 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 import { faStar as farStar, faHeart } from '@fortawesome/free-regular-svg-icons';
 import Button from '../Button/Button';
+import Ratings from '../../features/Ratings/RatingsContainer.js';
+import { render } from 'enzyme';
 
 function ProductBox({
   name,
@@ -17,6 +19,7 @@ function ProductBox({
   oldPrice,
   promo,
   stars,
+  userStars,
   favorite,
   compare,
   updateFavoriteStatus,
@@ -43,17 +46,7 @@ function ProductBox({
       </div>
       <div className={styles.content}>
         <h5>{name}</h5>
-        <div className={styles.stars}>
-          {[1, 2, 3, 4, 5].map(i => (
-            <a key={i} href='#'>
-              {i <= stars ? (
-                <FontAwesomeIcon icon={faStar}>{i} stars</FontAwesomeIcon>
-              ) : (
-                <FontAwesomeIcon icon={farStar}>{i} stars</FontAwesomeIcon>
-              )}
-            </a>
-          ))}
-        </div>
+        <Ratings stars={stars} userStars={userStars} id={id}></Ratings>
       </div>
       <div className={styles.line}></div>
       <div className={styles.actions}>
@@ -91,9 +84,11 @@ ProductBox.propTypes = {
   oldPrice: PropTypes.number,
   promo: PropTypes.string,
   stars: PropTypes.number,
+  userStars: PropTypes.number,
   favorite: PropTypes.bool,
   compare: PropTypes.bool,
   updateFavoriteStatus: PropTypes.func,
+  rateProduct: PropTypes.func,
   id: PropTypes.string,
 };
 
