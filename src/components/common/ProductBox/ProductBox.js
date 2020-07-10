@@ -21,6 +21,7 @@ function ProductBox({
   compare,
   updateFavoriteStatus,
   id,
+  photo,
 }) {
   const handleSwitchButton = (favorite, id, event) => {
     event.preventDefault();
@@ -33,6 +34,7 @@ function ProductBox({
   return (
     <div className={styles.root}>
       <div className={styles.photo}>
+        <img className={styles.image} src={photo} />
         {promo && <div className={styles.sale}>{promo}</div>}
         <div className={styles.buttons}>
           <Button variant='small'>Quick View</Button>
@@ -95,6 +97,7 @@ ProductBox.propTypes = {
   compare: PropTypes.bool,
   updateFavoriteStatus: PropTypes.func,
   id: PropTypes.string,
+  photo: PropTypes.string,
 };
 
 export default ProductBox;
