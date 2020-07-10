@@ -11,7 +11,8 @@ $colorSoftGray: #e1e1e1;
 $colorLight: #ffffff;
 $bgColorLight: #f4f5f7;
 $bgDarkColor: #292929;
-
+$mega-dark-gray: #292929;
+$white: #ffffff;
 
 // VARIABLES WICH WE USE IN COMPONENTS
 $main-light: $colorLight;
@@ -43,4 +44,8 @@ $border-color-transition: 250ms;
 %hoverAnimation {
   transition: background-color $background-color-transition linear, color $color-transition linear, border-color $border-color-transition linear;
   transform: translate(0, 0);
-} 
+}
+
+//PROMOTIONS BOXES
+$promotion-box: $mega-dark-gray;
+$main-color: $white;

@@ -501,6 +501,30 @@ const initialState = {
   cart: {
     products: [],
   },
+  promotions: {
+    leftBanner: {
+      title: 'Guest Room',
+      subtitle: 'Sofa',
+      discount: 20,
+      image:
+        'https://images.pexels.com/photos/1454806/pexels-photo-1454806.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
+    },
+    rightTopBanner: {
+      titleBold: 'Office',
+      title: 'Chair',
+      subtitle: 'collection',
+      price: 200.0,
+      image:
+        'https://images.pexels.com/photos/3771691/pexels-photo-3771691.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
+    },
+    rightBottomBanner: {
+      titleBold: 'Special',
+      title: 'collection',
+      subtitle: 'Save up 45% of furniture',
+      image:
+        'https://images.pexels.com/photos/545043/pexels-photo-545043.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
+    },
+  },
 };
 
 export default initialState;
