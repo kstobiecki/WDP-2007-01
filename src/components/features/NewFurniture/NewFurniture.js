@@ -19,11 +19,22 @@ class NewFurniture extends React.Component {
   }
 
   render() {
-    const { categories, products } = this.props;
+    const { categories, products, viewPort } = this.props;
     const { activeCategory, activePage } = this.state;
 
+    let itemsDisplayed;
+    if (viewPort.viewport === 'desktop') {
+      itemsDisplayed = 8;
+    } else if (viewPort.viewport === 'tablet-3') {
+      itemsDisplayed = 3;
+    } else if (viewPort.viewport === 'tablet-2') {
+      itemsDisplayed = 2;
+    } else {
+      itemsDisplayed = 1;
+    }
+
     const categoryProducts = products.filter(item => item.category === activeCategory);
-    const pagesCount = Math.ceil(categoryProducts.length / 8);
+    const pagesCount = Math.ceil(categoryProducts.length / itemsDisplayed);
 
     const dots = [];
     for (let i = 0; i < pagesCount; i++) {
@@ -67,14 +78,16 @@ class NewFurniture extends React.Component {
             </div>
           </div>
           <div className='row'>
-            {categoryProducts.slice(activePage * 8, (activePage + 1) * 8).map(item => (
-              <div
-                key={item.id}
-                className='col-12 col-lg-4 col-md-6 col-sm-12 col-xl-3'
-              >
-                <ProductBox {...item} />
-              </div>
-            ))}
+            {categoryProducts
+              .slice(activePage * itemsDisplayed, (activePage + 1) * itemsDisplayed)
+              .map(item => (
+                <div
+                  key={item.id}
+                  className='col-12 col-lg-4 col-md-6 col-sm-12 col-xl-3'
+                >
+                  <ProductBox {...item} />
+                </div>
+              ))}
           </div>
         </div>
       </div>
@@ -84,6 +97,7 @@ class NewFurniture extends React.Component {
 
 NewFurniture.propTypes = {
   children: PropTypes.node,
+  viewPort: PropTypes.any,
   categories: PropTypes.arrayOf(
     PropTypes.shape({
       id: PropTypes.string,
@@ -106,6 +120,7 @@ NewFurniture.propTypes = {
 NewFurniture.defaultProps = {
   categories: [],
   products: [],
+  viewPort: 'desktop',
 };
 
 export default NewFurniture;
