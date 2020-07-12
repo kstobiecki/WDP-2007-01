@@ -12,6 +12,7 @@ import { faStar as farStar, faHeart } from '@fortawesome/free-regular-svg-icons'
 import Button from '../Button/Button';
 
 function ProductBox({
+
   name,
   price,
   oldPrice,
@@ -20,6 +21,7 @@ function ProductBox({
   favorite,
   compare,
   updateFavoriteStatus,
+  toggleCompare,
   id,
   photo,
 }) {
@@ -67,7 +69,11 @@ function ProductBox({
           >
             <FontAwesomeIcon icon={faHeart}>Favorite</FontAwesomeIcon>
           </Button>
-          <Button variant='outline' active={compare}>
+          <Button variant='outline' active={compare}
+            onClick={e => {
+              toggleCompare(id);
+              e.preventDefault();
+            }}>
             <FontAwesomeIcon icon={faExchangeAlt}>Add to compare</FontAwesomeIcon>
           </Button>
         </div>
@@ -98,6 +104,7 @@ ProductBox.propTypes = {
   updateFavoriteStatus: PropTypes.func,
   id: PropTypes.string,
   photo: PropTypes.string,
+  toggleCompare: PropTypes.func,
 };
 
 export default ProductBox;
