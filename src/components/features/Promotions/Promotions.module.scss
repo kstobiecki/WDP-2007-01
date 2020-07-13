@@ -104,3 +104,26 @@
     }
   }
 }
+
+@media (max-width: 575px) {
+  .root {
+    .promotions {
+      max-height: 750px;
+      height: 750px;
+
+      .leftBanner {
+        min-height: 380px;
+      }
+    }
+
+    .rightBanners {
+      .topBanner {
+        margin-bottom: 0 !important;
+      }
+    }
+
+    .bottomBanner {
+      margin-top: 0 !important;
+    }
+  }
+}
