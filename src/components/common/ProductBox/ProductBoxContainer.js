@@ -5,6 +5,7 @@ import ProductBox from './ProductBox';
 import { getAll } from '../../../redux/categoriesRedux.js';
 import { getNew } from '../../../redux/productsRedux.js';
 import { updateFavoriteStatus } from '../../../redux/productsRedux.js';
+import { toggleCompare } from '../../../redux/productsRedux';
 
 const mapStateToProps = state => ({
   categories: getAll(state),
@@ -19,6 +20,8 @@ const mapDispatchToProps = dispatch => ({
         id: id,
       })
     ),
+
+  toggleCompare: productId => dispatch(toggleCompare(productId)),
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(ProductBox);
