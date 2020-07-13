@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 
 import Header from '../Header/Header';
 import Footer from '../Footer/Footer';
+import Banners from '../Banners/BannersContainer';
 
 class MainLayout extends Component {
   componentDidMount() {
@@ -33,6 +34,7 @@ class MainLayout extends Component {
       <div>
         <Header />
         {children}
+        <Banners />
         <Footer />
       </div>
     );
