@@ -23,7 +23,9 @@ function ProductBox({
   favorite,
   compare,
   updateFavoriteStatus,
+  toggleCompare,
   id,
+  photo,
 }) {
   const handleSwitchButton = (favorite, id, event) => {
     event.preventDefault();
@@ -36,6 +38,7 @@ function ProductBox({
   return (
     <div className={styles.root}>
       <div className={styles.photo}>
+        <img className={styles.image} src={photo} />
         {promo && <div className={styles.sale}>{promo}</div>}
         <div className={styles.buttons}>
           <Button variant='small'>Quick View</Button>
@@ -58,7 +61,14 @@ function ProductBox({
           >
             <FontAwesomeIcon icon={faHeart}>Favorite</FontAwesomeIcon>
           </Button>
-          <Button variant='outline' active={compare}>
+          <Button
+            variant='outline'
+            active={compare}
+            onClick={e => {
+              toggleCompare(id);
+              e.preventDefault();
+            }}
+          >
             <FontAwesomeIcon icon={faExchangeAlt}>Add to compare</FontAwesomeIcon>
           </Button>
         </div>
@@ -90,6 +100,8 @@ ProductBox.propTypes = {
   updateFavoriteStatus: PropTypes.func,
   rateProduct: PropTypes.func,
   id: PropTypes.string,
+  photo: PropTypes.string,
+  toggleCompare: PropTypes.func,
 };
 
 export default ProductBox;
