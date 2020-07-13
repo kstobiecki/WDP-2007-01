@@ -3,21 +3,19 @@ import PropTypes from 'prop-types';
 
 import styles from './ProductBox.module.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {
-  faStar,
-  faExchangeAlt,
-  faShoppingBasket,
-} from '@fortawesome/free-solid-svg-icons';
-import { faStar as farStar, faHeart } from '@fortawesome/free-regular-svg-icons';
+import { faExchangeAlt, faShoppingBasket } from '@fortawesome/free-solid-svg-icons';
+import { faStar as faHeart } from '@fortawesome/free-regular-svg-icons';
 import Button from '../Button/Button';
+import Ratings from '../../features/Ratings/RatingsContainer.js';
+import { render } from 'enzyme';
 
 function ProductBox({
-
   name,
   price,
   oldPrice,
   promo,
   stars,
+  userStars,
   favorite,
   compare,
   updateFavoriteStatus,
@@ -47,17 +45,7 @@ function ProductBox({
       </div>
       <div className={styles.content}>
         <h5>{name}</h5>
-        <div className={styles.stars}>
-          {[1, 2, 3, 4, 5].map(i => (
-            <a key={i} href='#'>
-              {i <= stars ? (
-                <FontAwesomeIcon icon={faStar}>{i} stars</FontAwesomeIcon>
-              ) : (
-                <FontAwesomeIcon icon={farStar}>{i} stars</FontAwesomeIcon>
-              )}
-            </a>
-          ))}
-        </div>
+        <Ratings stars={stars} userStars={userStars} id={id}></Ratings>
       </div>
       <div className={styles.line}></div>
       <div className={styles.actions}>
@@ -69,11 +57,14 @@ function ProductBox({
           >
             <FontAwesomeIcon icon={faHeart}>Favorite</FontAwesomeIcon>
           </Button>
-          <Button variant='outline' active={compare}
+          <Button
+            variant='outline'
+            active={compare}
             onClick={e => {
               toggleCompare(id);
               e.preventDefault();
-            }}>
+            }}
+          >
             <FontAwesomeIcon icon={faExchangeAlt}>Add to compare</FontAwesomeIcon>
           </Button>
         </div>
@@ -99,9 +90,11 @@ ProductBox.propTypes = {
   oldPrice: PropTypes.number,
   promo: PropTypes.string,
   stars: PropTypes.number,
+  userStars: PropTypes.number,
   favorite: PropTypes.bool,
   compare: PropTypes.bool,
   updateFavoriteStatus: PropTypes.func,
+  rateProduct: PropTypes.func,
   id: PropTypes.string,
   photo: PropTypes.string,
   toggleCompare: PropTypes.func,

@@ -14,6 +14,7 @@ const createActionName = name => `app/${reducerName}/${name}`;
 
 /* action types */
 const UPDATE_FAVORITE_STATUS = createActionName('UPDATE_FAVORITE_STATUS');
+const RATE_PRODUCT = createActionName('RATE_PRODUCT');
 const TOGGLE_COMPARE = createActionName('TOGGLE_COMPARE');
 
 /* action creators */
@@ -21,6 +22,11 @@ const TOGGLE_COMPARE = createActionName('TOGGLE_COMPARE');
 export const updateFavoriteStatus = payload => ({
   payload,
   type: UPDATE_FAVORITE_STATUS,
+});
+
+export const rateProduct = payload => ({
+  payload,
+  type: RATE_PRODUCT,
 });
 
 export const toggleCompare = productId => ({
@@ -42,6 +48,18 @@ export default function reducer(statePart = [], action = {}) {
         return item;
       });
       return updateStatus;
+    }
+    case RATE_PRODUCT: {
+      const updateRating = statePart.map(item => {
+        if (item.id === action.payload.id) {
+          return {
+            ...item,
+            userStars: action.payload.userStars,
+          };
+        }
+        return item;
+      });
+      return updateRating;
     }
     case TOGGLE_COMPARE: {
       const productIndex = statePart.findIndex(
