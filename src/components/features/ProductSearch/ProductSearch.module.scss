@@ -35,6 +35,10 @@
       font-size: 14px;
       outline: none;
 
+      @media (max-width: 425px) {
+        width: 60px;
+      }
+
       &:hover {
         color: $primary;
         cursor: pointer;
@@ -52,6 +56,10 @@
       padding-left: 10px;
       font-size: 14px;
       outline: none;
+
+      @media (max-width: 425px) {
+        width: 140px;
+      }
 
       &::placeholder {
         color: $text-color;
