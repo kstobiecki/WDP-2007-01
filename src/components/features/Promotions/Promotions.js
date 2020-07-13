@@ -10,7 +10,7 @@ class Promotions extends React.Component {
       <div className={styles.root}>
         <div className='container'>
           <div className={`row ${styles.promotions}`}>
-            <div className={`col-6 ${styles.leftBanner}`}>
+            <div className={`col-12 col-sm-6 ${styles.leftBanner}`}>
               <img
                 src={promotions.leftBanner.image}
                 alt={promotions.leftBanner.subtitle}
@@ -23,7 +23,7 @@ class Promotions extends React.Component {
                 >{`-${promotions.leftBanner.discount}%`}</span>
               </div>
             </div>
-            <div className={`col-6 no-gutters ${styles.rightBanners}`}>
+            <div className={`col-12 col-sm-6 no-gutters ${styles.rightBanners}`}>
               <div className={styles.topBanner}>
                 <img
                   src={promotions.rightTopBanner.image}
