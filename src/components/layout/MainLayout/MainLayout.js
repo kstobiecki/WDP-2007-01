@@ -36,8 +36,8 @@ class MainLayout extends Component {
         <Header />
         {children}
         <Banners />
-        <Footer />
         <Feedback />
+        <Footer />
       </div>
     );
   }
