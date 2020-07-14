@@ -1,8 +1,10 @@
-import React from 'react';
+import React, { createRef } from 'react';
 import PropTypes from 'prop-types';
 
 import styles from './NewFurniture.module.scss';
-import ProductBox from '../../common/ProductBox/ProductBox';
+
+import ProductBox from '../../common/ProductBox/ProductBoxContainer';
+import SwipeableComp from '../../common/SwipeableComp/SwipeableComp';
 
 class NewFurniture extends React.Component {
   state = {
@@ -10,33 +12,59 @@ class NewFurniture extends React.Component {
     activeCategory: 'bed',
   };
 
+  constructor(props) {
+    super(props);
+    this.rowRef = createRef();
+  }
+
   handlePageChange(newPage) {
-    this.setState({ activePage: newPage });
+    this.rowRef.current.className = 'row fade';
+    setTimeout(() => {
+      this.setState({ activePage: newPage });
+    }, 200);
   }
 
   handleCategoryChange(newCategory) {
-    this.setState({ activeCategory: newCategory });
+    this.rowRef.current.className = 'row fade';
+    setTimeout(() => {
+      this.setState({ activeCategory: newCategory });
+    }, 200);
   }
 
   render() {
-    const { categories, products } = this.props;
+    const { categories, products, viewPort } = this.props;
     const { activeCategory, activePage } = this.state;
 
+    let itemsDisplayed;
+    if (viewPort.viewport === 'desktop') {
+      itemsDisplayed = 8;
+    } else if (viewPort.viewport === 'tablet-3') {
+      itemsDisplayed = 3;
+    } else if (viewPort.viewport === 'tablet-2') {
+      itemsDisplayed = 2;
+    } else {
+      itemsDisplayed = 1;
+    }
+
     const categoryProducts = products.filter(item => item.category === activeCategory);
-    const pagesCount = Math.ceil(categoryProducts.length / 8);
+    const pagesCount = Math.ceil(categoryProducts.length / itemsDisplayed);
 
     const dots = [];
     for (let i = 0; i < pagesCount; i++) {
       dots.push(
-        <li>
+        <li key={i}>
           <a
             onClick={() => this.handlePageChange(i)}
-            className={i === activePage && styles.active}
+            className={i === activePage ? styles.active : ''}
           >
             page {i}
           </a>
         </li>
       );
+    }
+
+    if (this.rowRef.current) {
+      this.rowRef.current.className = 'row fade show';
     }
 
     return (
@@ -52,7 +80,7 @@ class NewFurniture extends React.Component {
                   {categories.map(item => (
                     <li key={item.id}>
                       <a
-                        className={item.id === activeCategory && styles.active}
+                        className={item.id === activeCategory ? styles.active : ''}
                         onClick={() => this.handleCategoryChange(item.id)}
                       >
                         {item.name}
@@ -66,16 +94,47 @@ class NewFurniture extends React.Component {
               </div>
             </div>
           </div>
-          <div className='row'>
-            {categoryProducts.slice(activePage * 8, (activePage + 1) * 8).map(item => (
-              <div
-                key={item.id}
-                className='col-12 col-lg-4 col-md-6 col-sm-12 col-xl-3'
-              >
-                <ProductBox {...item} />
-              </div>
-            ))}
-          </div>
+          <SwipeableComp
+            leftAction={() =>
+              this.handlePageChange(
+                activePage + 1 < pagesCount ? activePage + 1 : activePage
+              )
+            }
+            rightAction={() =>
+              this.handlePageChange(activePage > 0 ? activePage - 1 : 0)
+            }
+          >
+            <button 
+              className={styles.slideButtonLeft}
+              onClick={() => 
+                this.handlePageChange(
+                  activePage > 0 ? activePage - 1 : 0)
+              }
+            >
+              &#x0003C;
+            </button>
+            <button 
+              className={styles.slideButtonRight}
+              onClick={() => 
+                this.handlePageChange(
+                  activePage + 1 < pagesCount ? activePage + 1 : activePage)
+              }
+            >
+              &#x0003E;
+            </button>
+            <div ref={this.rowRef} className='row fade show'>
+              {categoryProducts
+                .slice(activePage * itemsDisplayed, (activePage + 1) * itemsDisplayed)
+                .map(item => (
+                  <div
+                    key={item.id}
+                    className='col-12 col-lg-4 col-md-6 col-sm-12 col-xl-3'
+                  >
+                    <ProductBox {...item} />
+                  </div>
+                ))}
+            </div>
+          </SwipeableComp>
         </div>
       </div>
     );
@@ -84,6 +143,7 @@ class NewFurniture extends React.Component {
 
 NewFurniture.propTypes = {
   children: PropTypes.node,
+  viewPort: PropTypes.any,
   categories: PropTypes.arrayOf(
     PropTypes.shape({
       id: PropTypes.string,
@@ -106,6 +166,7 @@ NewFurniture.propTypes = {
 NewFurniture.defaultProps = {
   categories: [],
   products: [],
+  viewPort: 'desktop',
 };
 
 export default NewFurniture;
