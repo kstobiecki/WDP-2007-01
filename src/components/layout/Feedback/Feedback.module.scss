@@ -64,10 +64,36 @@
       }
     }
   }
+
+  .icon {
+    margin: $feedback-containers-margin;
+  }
+
   .wrapper {
-    margin: 0; 
+    margin: $feedback-containers-margin;
+    color: $colorLightGray;
+    text-align: center;
+    font-size: 0.8rem;
+
+    .text {
+      margin: $feedback-containers-margin;
+      padding: 0 90px 0 50px ;
+    }
+
     img {
       width: 100px;
+      padding-right: 15px
+    }
+
+    .client {
+      margin: auto;
+
+      .name {
+        color: $colorDarkGray;
+        text-align: left;
+        font-weight: 600;
+      }
     }
   }
 }
+

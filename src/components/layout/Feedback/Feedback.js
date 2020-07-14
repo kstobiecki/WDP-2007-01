@@ -46,17 +46,16 @@ class Feedback extends React.Component {
           </div>
           <div>
             {feedback.map(item => (
-              <div
-                key={item.name}
-                className={`row justify-content-center ${styles.wrapper}`}
-              >
-                <FontAwesomeIcon icon={faQuoteRight} />
-                <div>{item.text}</div>
-                <div className={'row'}>
-                  <img src={item.image} alt={item.alt}></img>
-                  <div className={'column'}>
-                    <div>{item.name}</div>
-                    <div>{item.description}</div>
+              <div key={item.name} className={`row justify-content-center`}>
+                <FontAwesomeIcon icon={faQuoteRight} className={styles.icon} />
+                <div className={`row justify-content-center ${styles.wrapper}`}>
+                  <div className={styles.text}>{item.text}</div>
+                  <div className={'row'}>
+                    <img src={item.image} alt={item.alt}></img>
+                    <div className={`column ${styles.client}`}>
+                      <div className={styles.name}>{item.name}</div>
+                      <div>{item.description}</div>
+                    </div>
                   </div>
                 </div>
               </div>
