@@ -4,11 +4,13 @@ import React from 'react';
 import styles from './Homepage.module.scss';
 
 import FeatureBoxes from '../../features/FeatureBoxes/FeatureBoxes';
+import Promotions from '../../features/Promotions/PromotionsContainer';
 import NewFurniture from '../../features/NewFurniture/NewFurnitureContainer';
 
 const Homepage = () => (
   <div className={styles.root}>
     <FeatureBoxes />
+    <Promotions />
     <NewFurniture />
   </div>
 );

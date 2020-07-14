@@ -122,18 +122,18 @@ class NewFurniture extends React.Component {
             >
               &#x0003E;
             </button>
-            <div ref={this.rowRef} className='row fade show'>
-              {categoryProducts
-                .slice(activePage * itemsDisplayed, (activePage + 1) * itemsDisplayed)
-                .map(item => (
-                  <div
-                    key={item.id}
-                    className='col-12 col-lg-4 col-md-6 col-sm-12 col-xl-3'
-                  >
-                    <ProductBox {...item} />
-                  </div>
-                ))}
-            </div>
+          <div ref={this.rowRef} className='row fade show'>
+            {categoryProducts
+              .slice(activePage * itemsDisplayed, (activePage + 1) * itemsDisplayed)
+              .map(item => (
+                <div
+                  key={item.id}
+                  className='col-12 col-lg-4 col-md-6 col-sm-12 col-xl-3'
+                >
+                  <ProductBox {...item} />
+                </div>
+              ))}
+          </div>
           </SwipeableComp>
         </div>
       </div>

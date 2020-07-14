@@ -1,0 +1,129 @@
+@import "../../../styles/settings.scss";
+
+.root {
+  margin-bottom: 50px;
+
+  .promotions {
+    max-height: 400px;
+    text-transform: uppercase;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .leftBanner {
+      position: relative;
+
+      .desc {
+        position: absolute;
+        width: 85%;
+        height: 82%;
+        background-color: rgba($color: $promotion-box, $alpha: .5);
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        color: $main-color;
+        font-size: 36px;
+        line-height: 1;
+        font-weight: 700;
+
+        .subtitle {
+          font-weight: 900;
+          font-size: 48px;
+        }
+
+        .discount {
+          align-self: flex-start;
+          margin-top: 15px;
+          padding: 5px 15px;
+          border: 4px solid $main-color;
+        }
+      }
+    }
+
+    .rightBanners {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      .topBanner {
+        height: 190px;
+        margin-bottom: 10px;
+        position: relative;
+
+        .description {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          font-size: 36px;
+          font-weight: 600;
+          line-height: 1.1;
+
+          .subtitle {
+            font-size: 24px;
+          }
+
+          .price {
+            color: $primary;
+            font-weight: 700;
+          }
+        }
+      }
+
+      .bottomBanner {
+        height: 190px;
+        margin-top: 10px;
+        position: relative;
+        text-align: center;
+
+        .content {
+          position: absolute;
+          top: 60%;
+          transform: translateY(-60%);
+          right: 15px;
+
+          .title {
+            color: $primary;
+            font-size: 24px;
+            font-weight: 600;
+          }
+
+          .subtitle {
+            font-size: 16px;
+            font-weight: 500;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 575px) {
+  .root {
+    .promotions {
+      max-height: 750px;
+      height: 750px;
+
+      .leftBanner {
+        min-height: 380px;
+      }
+    }
+
+    .rightBanners {
+      .topBanner {
+        margin-bottom: 0 !important;
+      }
+    }
+
+    .bottomBanner {
+      margin-top: 0 !important;
+    }
+  }
+}
