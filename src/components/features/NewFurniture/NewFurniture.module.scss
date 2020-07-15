@@ -180,3 +180,47 @@
     }
   }
 }
+
+.slideButtonLeft {
+  color: $bgColorLight;
+  font-family: Open Sans;
+  font-size: 16px;
+  font-weight: 500;
+  padding: 10px;
+  background-color: $colorPrimary;
+  border: 1px solid $bgDarkColor;
+  text-decoration: none;
+  cursor: pointer;
+  text-decoration: none;
+  float: left;
+
+  &:active {
+    position: relative;
+    top: 1px;
+  }
+  &:focus {
+    outline: 0;
+  }
+}
+
+.slideButtonRight {
+  color: $bgColorLight;
+  font-family: Open Sans;
+  font-size: 16px;
+  font-weight: 500;
+  padding: 10px;
+  background-color: $colorPrimary;
+  border: 1px solid $bgDarkColor;
+  text-decoration: none;
+  cursor: pointer;
+  text-decoration: none;
+  float: right;
+
+  &:active {
+    position: relative;
+    top: 1px;
+  }
+  &:focus {
+    outline: 0;
+  }
+}
