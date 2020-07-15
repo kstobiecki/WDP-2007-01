@@ -1,0 +1,39 @@
+@import "../../../styles/settings.scss";
+
+.comparableProductsContainer {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 150px;
+  margin-right: 20px;
+  &:hover {
+     .iconTimes {
+       display: block;
+     }
+  }
+}
+
+.iconTimesContainer {
+  display: flex;
+  justify-content: flex-end;
+  position: absolute;
+  top: 5px;
+  right: 5px;
+}
+
+.iconTimes {
+  margin-top: 10px;
+  font-size: 20px;
+  display: none;
+  &:hover {
+    color: $primary;
+  }
+}
+
+.comparableImage {
+  width: 100%;
+}
+
+.comparableName {
+  text-align: center;
+}

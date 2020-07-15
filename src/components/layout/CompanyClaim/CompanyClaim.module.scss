@@ -66,6 +66,7 @@
       &:hover {
         .cartIcon {
           background-color: lighten($primary, 10%);
+          @extend %hoverAnimation;
         }
       }
     }

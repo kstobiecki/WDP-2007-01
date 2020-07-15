@@ -7,7 +7,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import styles from './FeatureBox.module.scss';
 
 const FeatureBox = ({ active, icon, children }) => (
-  <Link>
+  <Link to=''>
     <div className={styles.root + (active ? ' ' + styles.active : '')}>
       {icon && (
         <div className={styles.iconWrapper}>

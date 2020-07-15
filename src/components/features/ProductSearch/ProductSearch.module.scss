@@ -11,6 +11,15 @@
     display: flex;
     align-items: center;
     position: relative;
+    min-width: 200px;
+
+    &:hover .dropdownContent {
+      display: block;
+    }
+
+    &:hover ul {
+      color: $primary;
+    }
 
     .icon:first-child {
       color: $primary;
@@ -25,12 +34,62 @@
       z-index: 0;
     }
 
-    select {
+    ul {
+      list-style: none;
+      z-index: 1;
+    }
+
+    .dropdownContent {
       -webkit-appearance: none;
       border: 0;
       background-color: transparent;
-      padding: 5px 30px 5px 35px;
+      position: absolute;
+      display: none;
+      left: 0;
+      top: 0;
+      transform: translate(-31%, 17%);
+
+      &:hover {
+        color: $primary;
+        cursor: pointer;
+      }
+
+      li {
+        transition: .2s;
+        padding: 7px 0;
+
+        a {
+          display: block;
+          text-decoration: none;
+          padding-left: 40%;
+          color: $header-topbar-bg;
+
+          &:hover {
+            background-color: $primary;
+            color: $header-topbar-bg;
+          }
+        }
+
+        &:hover {
+          background-color: $primary;
+        }
+      }
+    }
+
+    .droped {
+      border: 1px solid $form-border-color;
+      border-bottom: none;
+      min-width: 200px;
+      background-color: white;
+
+      &:last-child {
+        border: 1px solid $form-border-color;
+      }
+    }
+
+    .placeholder {
       position: relative;
+<<<<<<< HEAD
       z-index: 1;
       font-size: 14px;
       outline: none;
@@ -39,6 +98,13 @@
         color: $primary;
         cursor: pointer;
       }
+=======
+      display: inline-block;
+      font-size: 14px;
+      top: 0;
+      left: 0;
+      transform: translate(-5%, 35%);
+>>>>>>> cc603669465023b224a45d59a879197dd232fd64
     }
   }
 
@@ -52,6 +118,7 @@
       padding-left: 10px;
       font-size: 14px;
       outline: none;
+      max-width: 220px;
 
       &::placeholder {
         color: $text-color;
@@ -62,6 +129,7 @@
       border: 0;
       background-color: transparent;
       outline: none;
+      transform: translateX(-30%);
     }
   }
 }
