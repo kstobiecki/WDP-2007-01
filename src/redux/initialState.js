@@ -585,20 +585,23 @@ const initialState = {
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas id tristique quam. Duis lobortis ante sit amet urna faucibus, in egestas nisl mattis. Donec vitae sem eu felis consectetur laoreet. In gravida eros ligula, eget auctor est imperdiet ut.',
       description: 'Furniture client',
     },
-    // {
-    //   image: 'https://i.postimg.cc/s2sTJPbd/man-holding-clipboard-inside-room-1543924.jpg',
-    //   alt: 'happy client',
-    //   name: 'John Doe',
-    //   text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas id tristique quam. Duis lobortis ante sit amet urna faucibus, in egestas nisl mattis.',
-    //   description: 'Furniture client',
-    // },
-    // {
-    //   image: 'https://i.postimg.cc/s2mwHQRB/man-in-black-holding-phone-618613.jpg',
-    //   alt: 'happy client',
-    //   name: 'Adam Smith',
-    //   text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas id tristique quam. Duis lobortis ante sit amet urna faucibus, in egestas nisl mattis.',
-    //   description: 'Furniture client',
-    // },
+    {
+      image:
+        'https://i.postimg.cc/s2sTJPbd/man-holding-clipboard-inside-room-1543924.jpg',
+      alt: 'happy client',
+      name: 'John Doe',
+      text:
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas id tristique quam. Duis lobortis ante sit amet urna faucibus, in egestas nisl mattis.',
+      description: 'Furniture client',
+    },
+    {
+      image: 'https://i.postimg.cc/s2mwHQRB/man-in-black-holding-phone-618613.jpg',
+      alt: 'happy client',
+      name: 'Adam Smith',
+      text:
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas id tristique quam. Duis lobortis ante sit amet urna faucibus, in egestas nisl mattis.',
+      description: 'Furniture client',
+    },
   ],
 };
 
