@@ -104,6 +104,22 @@ class NewFurniture extends React.Component {
               this.handlePageChange(activePage > 0 ? activePage - 1 : 0)
             }
           >
+            <button
+              className={styles.slideButtonLeft}
+              onClick={() => this.handlePageChange(activePage > 0 ? activePage - 1 : 0)}
+            >
+              &#x0003C;
+            </button>
+            <button
+              className={styles.slideButtonRight}
+              onClick={() =>
+                this.handlePageChange(
+                  activePage + 1 < pagesCount ? activePage + 1 : activePage
+                )
+              }
+            >
+              &#x0003E;
+            </button>
             <div ref={this.rowRef} className='row fade show'>
               {categoryProducts
                 .slice(activePage * itemsDisplayed, (activePage + 1) * itemsDisplayed)

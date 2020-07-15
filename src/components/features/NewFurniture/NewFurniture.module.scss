@@ -5,7 +5,7 @@
     margin-bottom: 30px;
     position: relative;
 
-    :global(.row) > * {
+    :global(.row)>* {
       border-bottom: 4px solid $form-border-color-soft;
     }
 
@@ -33,10 +33,12 @@
 
     .menu {
       text-align: center;
+
       ul {
         margin: 0;
         padding: 0;
         list-style: none;
+
         li {
           display: inline-block;
           margin: 0 0.5rem;
@@ -97,5 +99,128 @@
         }
       }
     }
+  }
+}
+
+@media (max-width: 991px) {
+  .root {
+    .panelBar {
+      .heading {
+        h3 {
+          font-size: 18px;
+        }
+      }
+
+      .menu {
+        text-align: start;
+
+        ul {
+          margin-left: 20px;
+
+          li {
+            margin: 0 0.3rem;
+
+            a {
+              font-size: 16px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .root {
+    .panelBar {
+      margin-bottom: 110px;
+
+      :global(.row)>* {
+        border-bottom: none;
+      }
+
+      .heading {
+        position: static;
+        margin: 0 auto;
+        margin-bottom: 30px;
+
+        &::before {
+          content: "";
+          display: none;
+        }
+      }
+
+      .menu {
+        min-width: 100%;
+
+        ul {
+          position: static;
+          margin: 0 auto;
+          margin-top: -20px;
+          text-align: center;
+
+          li {
+            margin: 0 0.5rem;
+
+            a {
+              font-size: 14px;
+            }
+          }
+        }
+      }
+
+      .dots {
+        top: 90px;
+        text-align: center;
+
+        ul {
+          padding: 0;
+        }
+      }
+    }
+  }
+}
+
+.slideButtonLeft {
+  color: $bgColorLight;
+  font-family: Open Sans;
+  font-size: 16px;
+  font-weight: 500;
+  padding: 10px;
+  background-color: $colorPrimary;
+  border: 1px solid $bgDarkColor;
+  text-decoration: none;
+  cursor: pointer;
+  text-decoration: none;
+  float: left;
+
+  &:active {
+    position: relative;
+    top: 1px;
+  }
+  &:focus {
+    outline: 0;
+  }
+}
+
+.slideButtonRight {
+  color: $bgColorLight;
+  font-family: Open Sans;
+  font-size: 16px;
+  font-weight: 500;
+  padding: 10px;
+  background-color: $colorPrimary;
+  border: 1px solid $bgDarkColor;
+  text-decoration: none;
+  cursor: pointer;
+  text-decoration: none;
+  float: right;
+
+  &:active {
+    position: relative;
+    top: 1px;
+  }
+  &:focus {
+    outline: 0;
   }
 }

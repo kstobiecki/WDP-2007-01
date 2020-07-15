@@ -1,0 +1,1 @@
+{"version":3,"sourceRoot":"","sources":["../../../styles/settings.scss","Button.module.scss"],"names":[],"mappings":"AA0CA;EACE;EACA;;;ACvCF;EACE,kBDFW;ECGX,ODGW;ECFX;EACA;EACA;EACA;;AAEA;EACE;EACA,kBDVW;ECWX;;;AAKJ;EAEE;EACA;EACA;EACA;;;AAGF;EACE;EACA;EACA;EACA,OD7BW;EC8BX;EACA;;AAEA;EACE,kBDlCS;ECmCT,OD7BS;;ACiCX;EACE,kBDvCW;ECwCX","file":"Button.module.css"}
