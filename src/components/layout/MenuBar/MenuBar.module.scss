@@ -4,11 +4,11 @@
   box-shadow: 2px 3.464px 6px rgba(1, 2, 2, 0.2);
   background-color: $main-light;
 
-  :global(.container) > :global(.row) {
+  :global(.container)> :global(.row) {
     height: 84px;
   }
 
-  
+
   .hamburger {
     display: none;
   }
@@ -64,13 +64,35 @@
   }
 }
 
+//tablet
+@media (max-width: 1200px) {
+  .root {
+    .menu {
+      position: static;
+
+      a {
+        padding: 16px 8px;
+      }
+    }
+  }
+}
+
+@media (max-width: 991px) {
+  .root {
+    .menu {
+      margin: 0 auto;
+    }
+  }
+}
+
 //mobile
-@media (max-width: 576px) {
+@media (max-width: 575px) {
   .root {
     padding: 5px;
 
     .hamburger {
       display: block;
+      margin-left: 5px;
     }
 
     .closeMenu {
@@ -89,6 +111,7 @@
 
       &.active {
         display: block;
+        position: fixed;
       }
 
       ul {
@@ -97,6 +120,17 @@
         justify-content: center;
         align-items: center;
       }
+    }
+  }
+}
+
+@media (max-width: 491px) {
+  .root {
+    margin-left: 5%;
+    margin-right: 5%;
+
+    .hamburger {
+      margin-left: 10%;
     }
   }
 }
