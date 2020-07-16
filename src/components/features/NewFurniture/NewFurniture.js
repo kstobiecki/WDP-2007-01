@@ -104,36 +104,34 @@ class NewFurniture extends React.Component {
               this.handlePageChange(activePage > 0 ? activePage - 1 : 0)
             }
           >
-            <button 
+            <button
               className={styles.slideButtonLeft}
-              onClick={() => 
-                this.handlePageChange(
-                  activePage > 0 ? activePage - 1 : 0)
-              }
+              onClick={() => this.handlePageChange(activePage > 0 ? activePage - 1 : 0)}
             >
               &#x0003C;
             </button>
-            <button 
+            <button
               className={styles.slideButtonRight}
-              onClick={() => 
+              onClick={() =>
                 this.handlePageChange(
-                  activePage + 1 < pagesCount ? activePage + 1 : activePage)
+                  activePage + 1 < pagesCount ? activePage + 1 : activePage
+                )
               }
             >
               &#x0003E;
             </button>
-          <div ref={this.rowRef} className='row fade show'>
-            {categoryProducts
-              .slice(activePage * itemsDisplayed, (activePage + 1) * itemsDisplayed)
-              .map(item => (
-                <div
-                  key={item.id}
-                  className='col-12 col-lg-4 col-md-6 col-sm-12 col-xl-3'
-                >
-                  <ProductBox {...item} />
-                </div>
-              ))}
-          </div>
+            <div ref={this.rowRef} className='row fade show'>
+              {categoryProducts
+                .slice(activePage * itemsDisplayed, (activePage + 1) * itemsDisplayed)
+                .map(item => (
+                  <div
+                    key={item.id}
+                    className='col-12 col-lg-4 col-md-6 col-sm-12 col-xl-3'
+                  >
+                    <ProductBox {...item} />
+                  </div>
+                ))}
+            </div>
           </SwipeableComp>
         </div>
       </div>
