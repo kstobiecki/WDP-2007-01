@@ -9,6 +9,13 @@
   display: flex;
   align-items: center;
   position: relative;
+  min-width: 200px;
+}
+.root .category:hover .dropdownContent {
+  display: block;
+}
+.root .category:hover ul {
+  color: #d58e32;
 }
 .root .category .icon:first-child {
   color: #d58e32;
@@ -21,19 +28,62 @@
   right: 10px;
   z-index: 0;
 }
-.root .category select {
+.root .category ul {
+  list-style: none;
+  z-index: 1;
+}
+.root .category .dropdownContent {
   -webkit-appearance: none;
   border: 0;
   background-color: transparent;
-  padding: 5px 30px 5px 35px;
-  position: relative;
-  z-index: 1;
-  font-size: 14px;
-  outline: none;
+  position: absolute;
+  display: none;
+  left: 0;
+  top: 0;
+  transform: translate(-31%, 17%);
 }
-.root .category select:hover {
+@media (max-width: 425px) {
+  .root .category .dropdownContent {
+    width: 60px;
+  }
+}
+.root .category .dropdownContent:hover {
   color: #d58e32;
   cursor: pointer;
+}
+.root .category .dropdownContent li {
+  transition: 0.2s;
+  padding: 7px 0;
+}
+.root .category .dropdownContent li a {
+  display: block;
+  text-decoration: none;
+  padding-left: 40%;
+  color: #434343;
+}
+.root .category .dropdownContent li a:hover {
+  background-color: #d58e32;
+  color: #434343;
+}
+.root .category .dropdownContent li:hover {
+  background-color: #d58e32;
+}
+.root .category .droped {
+  border: 1px solid #434343;
+  border-bottom: none;
+  min-width: 200px;
+  background-color: white;
+}
+.root .category .droped:last-child {
+  border: 1px solid #434343;
+}
+.root .category .placeholder {
+  position: relative;
+  display: inline-block;
+  font-size: 14px;
+  top: 0;
+  left: 0;
+  transform: translate(-5%, 35%);
 }
 .root .searchField {
   display: flex;
@@ -45,6 +95,12 @@
   padding-left: 10px;
   font-size: 14px;
   outline: none;
+  max-width: 220px;
+}
+@media (max-width: 425px) {
+  .root .searchField input {
+    width: 140px;
+  }
 }
 .root .searchField input::placeholder {
   color: #2a2a2a;
@@ -53,6 +109,7 @@
   border: 0;
   background-color: transparent;
   outline: none;
+  transform: translateX(-30%);
 }
 
 /*# sourceMappingURL=ProductSearch.module.css.map */

@@ -10,6 +10,16 @@
 .root :global(.container) > :global(.row) {
   height: 84px;
 }
+.root .hamburger {
+  display: none;
+}
+.root .closeMenu {
+  display: none !important;
+  width: 40px;
+  margin-top: 10px;
+  border: none;
+  margin-left: auto;
+}
 .root .menu {
   display: flex;
   align-self: stretch;
@@ -43,6 +53,37 @@
 }
 .root .menu a.active {
   border-color: #2a2a2a;
+}
+
+@media (max-width: 576px) {
+  .root {
+    padding: 5px;
+  }
+  .root .hamburger {
+    display: block;
+  }
+  .root .closeMenu {
+    display: block !important;
+  }
+  .root .menu {
+    display: none;
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background-color: #ffffff;
+    z-index: 10;
+    top: 0;
+    left: 0;
+  }
+  .root .menu.active {
+    display: block;
+  }
+  .root .menu ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 }
 
 /*# sourceMappingURL=MenuBar.module.css.map */

@@ -1,0 +1,222 @@
+@import "../../../styles/settings.scss";
+
+.heading {
+  position: relative;
+
+  h3 {
+    color: $primary;
+    text-transform: uppercase;
+    font-size: 20px;
+    line-height: 38px;
+    margin: 0;
+    letter-spacing: 1px;
+    width: 100%;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 45px;
+    border-bottom: 4px solid $primary;
+  }
+}
+
+.panelBar {
+    margin-bottom: 30px;
+    position: relative;
+    background-color: white;
+
+    :global(.row) > * {
+      border-bottom: 4px solid $form-border-color-soft;
+      width: 100%;
+    }
+ }
+
+.productBox {
+  padding: 0 15px;
+  border: 2px solid $form-border-color-soft;
+  border-top: 0;
+  background-color: $form-border-color-soft;
+
+  .nameBox {
+    text-transform: uppercase;
+    font-weight: bold;
+    background-color: white;
+
+    .element {
+      border: 2px solid $form-border-color-soft;
+      border-left: 0;
+      width: 25%;
+      text-align: center;
+      padding: 10px 0;
+
+      &:last-child {
+        border-right: none;
+      }
+
+      &:hover {
+        background: $form-border-color-soft;
+        border-top: 2px solid $primary;
+        color: $primary;
+      }
+    }
+  }
+}
+
+.leftBox {
+  position: relative;
+  background-color: $form-border-color-soft;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 500px;
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.iconsBox {
+  width: 40px;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  .iconBox {
+    padding-left: 8px;
+    margin-top: 10px;
+    border: 1px solid $colorGray;
+
+    &:hover {
+      color: $primary;
+      border-color: $primary;
+    }
+
+    svg {
+      font-size: 20px;
+      margin-top: 10px;
+      vertical-align: 0 !important;
+    }
+  }
+}
+
+.infoBox {
+  padding-top: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .circleText {
+    z-index: 999;
+    position: relative;
+    background-color: $colorGray;
+    opacity: 0.9;
+    height: 120px;
+    width: 120px;
+    border-radius: 60px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: $white;
+    margin-bottom: -20px;
+    .circleTextOne {
+      font-size: 22px;
+    }
+    .circleTextTwo {
+      text-decoration: line-through;
+      font-size: 16px;
+    }
+  }
+  .rectangleText {
+    z-index: 1;
+    position: relative;
+    background-color: $white;
+    width: 250px;
+    height: 100px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-shadow: 2px 4px 10px 4px rgba($colorGray, 0.35);
+    .triangleTopLeft {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 0;
+      height: 0;
+      border-top: 30px solid $footer-bg;
+      border-right: 30px solid transparent;
+    }
+    .triangleBottomRight {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      width: 0;
+      height: 0;
+      border-bottom: 30px solid $footer-bg;
+      border-left: 30px solid transparent;
+    }
+  }
+}
+
+.bannersWrapper {
+  height: 70px;
+  img {
+    width: 800px;
+    height: 70px;
+    opacity: 0.4;
+  }
+  .overlay {
+    background-color: white;
+  }
+  .active, :hover {
+    img {
+      opacity: 1;
+    }
+  }
+}
+
+.iconWrapper {
+  background-color: $footer-bg;
+  cursor: pointer;
+  padding: 0 15px;
+  svg {
+    color: white;
+  }
+}
+
+.photoRight {
+  background-color: #e9edf8;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  height: 100%;
+  width: 100%;
+}
+
+.textElements {
+  padding: 90px 0 0 80px;
+  .textFrom {
+    text-transform: uppercase;
+    font-size: 20px;
+  }
+  .textPrice {
+    color: #7aae30;
+    font-size: 45px;
+    font-weight: 600;
+  }
+  .textProduct {
+    color: #d58e34;
+    font-size: 45px;
+    font-weight: 600;
+    padding-bottom: 30px;
+  }
+  .button {
+    background-color: #7aae30;
+    text-transform: uppercase;
+  }
+}

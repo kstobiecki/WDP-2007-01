@@ -40,5 +40,9 @@
   background-color: #d58e32;
   color: #ffffff;
 }
+.outline.active {
+  background-color: #d58e32;
+  color: #ffffff;
+}
 
 /*# sourceMappingURL=Button.module.css.map */

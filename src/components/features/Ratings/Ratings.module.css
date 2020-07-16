@@ -1,0 +1,11 @@
+.stars a {
+  text-decoration: none;
+  color: #2a2a2a;
+}
+
+.active {
+  text-decoration: none;
+  color: #d58e32;
+}
+
+/*# sourceMappingURL=Ratings.module.css.map */

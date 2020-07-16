@@ -1,0 +1,107 @@
+.root {
+  margin-bottom: 50px;
+}
+.root .promotions {
+  max-height: 400px;
+  text-transform: uppercase;
+}
+.root .promotions img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.root .promotions .leftBanner {
+  position: relative;
+}
+.root .promotions .leftBanner .desc {
+  position: absolute;
+  width: 85%;
+  height: 82%;
+  background-color: rgba(41, 41, 41, 0.5);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  color: #ffffff;
+  font-size: 36px;
+  line-height: 1;
+  font-weight: 700;
+}
+.root .promotions .leftBanner .desc .subtitle {
+  font-weight: 900;
+  font-size: 48px;
+}
+.root .promotions .leftBanner .desc .discount {
+  align-self: flex-start;
+  margin-top: 15px;
+  padding: 5px 15px;
+  border: 4px solid #ffffff;
+}
+.root .promotions .rightBanners {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.root .promotions .rightBanners .topBanner {
+  height: 190px;
+  margin-bottom: 10px;
+  position: relative;
+}
+.root .promotions .rightBanners .topBanner .description {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 36px;
+  font-weight: 600;
+  line-height: 1.1;
+}
+.root .promotions .rightBanners .topBanner .description .subtitle {
+  font-size: 24px;
+}
+.root .promotions .rightBanners .topBanner .description .price {
+  color: #d58e32;
+  font-weight: 700;
+}
+.root .promotions .rightBanners .bottomBanner {
+  height: 190px;
+  margin-top: 10px;
+  position: relative;
+  text-align: center;
+}
+.root .promotions .rightBanners .bottomBanner .content {
+  position: absolute;
+  top: 60%;
+  transform: translateY(-60%);
+  right: 15px;
+}
+.root .promotions .rightBanners .bottomBanner .content .title {
+  color: #d58e32;
+  font-size: 24px;
+  font-weight: 600;
+}
+.root .promotions .rightBanners .bottomBanner .content .subtitle {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+@media (max-width: 575px) {
+  .root .promotions {
+    max-height: 750px;
+    height: 750px;
+  }
+  .root .promotions .leftBanner {
+    min-height: 380px;
+  }
+  .root .rightBanners .topBanner {
+    margin-bottom: 0 !important;
+  }
+  .root .bottomBanner {
+    margin-top: 0 !important;
+  }
+}
+
+/*# sourceMappingURL=Promotions.module.css.map */

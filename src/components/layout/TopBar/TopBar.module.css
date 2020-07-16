@@ -36,4 +36,23 @@
   margin-right: 5px;
 }
 
+@media (max-width: 768px) {
+  .root span {
+    display: none;
+  }
+  .root .topOptions ul li {
+    margin-right: 10px;
+    font-size: 10px;
+  }
+  .root .topOptions ul li .icon {
+    margin-left: 5px;
+  }
+  .root .topMenu ul li {
+    margin-left: 10px;
+  }
+  .root .topMenu ul li .icon {
+    margin-right: 2px;
+  }
+}
+
 /*# sourceMappingURL=TopBar.module.css.map */

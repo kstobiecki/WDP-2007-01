@@ -80,4 +80,102 @@
   background-color: #d58e32;
 }
 
+@media (max-width: 991px) {
+  .root .panelBar .heading h3 {
+    font-size: 18px;
+  }
+  .root .panelBar .menu {
+    text-align: start;
+  }
+  .root .panelBar .menu ul {
+    margin-left: 20px;
+  }
+  .root .panelBar .menu ul li {
+    margin: 0 0.3rem;
+  }
+  .root .panelBar .menu ul li a {
+    font-size: 16px;
+  }
+}
+@media (max-width: 767px) {
+  .root .panelBar {
+    margin-bottom: 110px;
+  }
+  .root .panelBar :global(.row) > * {
+    border-bottom: none;
+  }
+  .root .panelBar .heading {
+    position: static;
+    margin: 0 auto;
+    margin-bottom: 30px;
+  }
+  .root .panelBar .heading::before {
+    content: "";
+    display: none;
+  }
+  .root .panelBar .menu {
+    min-width: 100%;
+  }
+  .root .panelBar .menu ul {
+    position: static;
+    margin: 0 auto;
+    margin-top: -20px;
+    text-align: center;
+  }
+  .root .panelBar .menu ul li {
+    margin: 0 0.5rem;
+  }
+  .root .panelBar .menu ul li a {
+    font-size: 14px;
+  }
+  .root .panelBar .dots {
+    top: 90px;
+    text-align: center;
+  }
+  .root .panelBar .dots ul {
+    padding: 0;
+  }
+}
+.slideButtonLeft {
+  color: #f4f5f7;
+  font-family: Open Sans;
+  font-size: 16px;
+  font-weight: 500;
+  padding: 10px;
+  background-color: #d58e32;
+  border: 1px solid #292929;
+  text-decoration: none;
+  cursor: pointer;
+  text-decoration: none;
+  float: left;
+}
+.slideButtonLeft:active {
+  position: relative;
+  top: 1px;
+}
+.slideButtonLeft:focus {
+  outline: 0;
+}
+
+.slideButtonRight {
+  color: #f4f5f7;
+  font-family: Open Sans;
+  font-size: 16px;
+  font-weight: 500;
+  padding: 10px;
+  background-color: #d58e32;
+  border: 1px solid #292929;
+  text-decoration: none;
+  cursor: pointer;
+  text-decoration: none;
+  float: right;
+}
+.slideButtonRight:active {
+  position: relative;
+  top: 1px;
+}
+.slideButtonRight:focus {
+  outline: 0;
+}
+
 /*# sourceMappingURL=NewFurniture.module.css.map */

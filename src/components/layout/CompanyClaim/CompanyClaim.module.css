@@ -61,4 +61,26 @@
   background-color: #dea55c;
 }
 
+@media (max-width: 767px) {
+  .root img {
+    margin-bottom: 60px;
+  }
+  .root .phoneNumber {
+    position: absolute;
+    margin-top: 20px;
+    margin-right: 20px;
+    max-width: 550px;
+  }
+  .root .phoneNumber p {
+    font-size: 14px;
+  }
+  .root .phoneNumber p .icon {
+    font-size: 18px;
+  }
+  .root .cart {
+    margin-bottom: 60px;
+    margin-right: 30px;
+  }
+}
+
 /*# sourceMappingURL=CompanyClaim.module.css.map */
