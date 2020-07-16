@@ -14,11 +14,13 @@ class MainLayout extends Component {
 
   resize = () => {
     const { changeViewPort } = this.props;
-    if (window.innerWidth <= 767) {
+    if (window.innerWidth <= 420) {
+      changeViewPort('mobile-slim');
+    } else if (window.innerWidth <= 767) {
       changeViewPort('mobile');
     } else if (window.innerWidth <= 991) {
       changeViewPort('tablet-2');
-    } else if (window.innerWidth <= 1191) {
+    } else if (window.innerWidth <= 1199) {
       changeViewPort('tablet-3');
     } else {
       changeViewPort('desktop');

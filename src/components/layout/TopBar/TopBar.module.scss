@@ -8,9 +8,11 @@
     margin: 0;
     padding: 0;
 
+
     li {
       display: inline-block;
       line-height: 55px;
+
 
       a {
         color: $main-light;
@@ -38,6 +40,29 @@
 
     .icon {
       margin-right: 5px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .root {
+    span {
+      display: none;
+    }
+    .topOptions ul li {
+      margin-right: 10px;
+      font-size: 10px;
+
+      .icon {
+        margin-left: 5px;
+      }
+    }
+    .topMenu ul li {
+      margin-left: 10px;
+
+      .icon {
+        margin-right: 2px;
+      }
     }
   }
 }
