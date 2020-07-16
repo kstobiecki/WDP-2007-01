@@ -550,6 +550,30 @@ const initialState = {
       src: 'https://i.postimg.cc/dQX0d7DW/6.png',
       alt: 'brands logo-6',
     },
+    {
+      src: 'https://i.postimg.cc/GmP3ZqKN/1.png',
+      alt: 'brands logo-7',
+    },
+    {
+      src: 'https://i.postimg.cc/s2Vfy702/2.png',
+      alt: 'brands logo-8',
+    },
+    {
+      src: 'https://i.postimg.cc/Zn1KhQ1k/3.png',
+      alt: 'brands logo-9',
+    },
+    {
+      src: 'https://i.postimg.cc/Z5zK718p/4.png',
+      alt: 'brands logo-10',
+    },
+    {
+      src: 'https://i.postimg.cc/QxTdqXTj/5.png',
+      alt: 'brands logo-11',
+    },
+    {
+      src: 'https://i.postimg.cc/dQX0d7DW/6.png',
+      alt: 'brands logo-12',
+    },
   ],
   promotions: {
     leftBanner: {
