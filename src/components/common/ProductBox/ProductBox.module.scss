@@ -17,6 +17,11 @@
     }
     overflow: hidden;
     align-items: flex-end;
+    &:hover {
+      .buttons {
+        visibility: visible;
+      }
+    }
 
     .image {
       width: 100%;
@@ -39,6 +44,10 @@
       display: flex;
       justify-content: space-between;
       visibility: hidden;
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
     }
   }
 
