@@ -5,6 +5,7 @@ import styles from './Feedback.module.scss';
 
 import { faQuoteRight } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faAngleRight, faAngleLeft } from '@fortawesome/free-solid-svg-icons';
 
 import SwipeableComp from '../../common/SwipeableComp/SwipeableComp';
 
@@ -74,22 +75,20 @@ class Feedback extends React.Component {
               this.handlePageChange(activePage > 0 ? activePage - 1 : 0)
             }
           >
-            <button
-              className={styles.slideButtonLeft}
+            <FontAwesomeIcon
+              icon={faAngleLeft}
+              className={styles.buttonLeft}
               onClick={() => this.handlePageChange(activePage > 0 ? activePage - 1 : 0)}
-            >
-              &#x0003C;
-            </button>
-            <button
-              className={styles.slideButtonRight}
+            />
+            <FontAwesomeIcon
+              icon={faAngleRight}
+              className={styles.buttonRight}
               onClick={() =>
                 this.handlePageChange(
                   activePage + 1 < feedbackCount ? activePage + 1 : activePage
                 )
               }
-            >
-              &#x0003E;
-            </button>
+            />
             <div ref={this.rowRef} className='row fade show'>
               {feedback
                 .slice(activePage * itemsDisplayed, (activePage + 1) * itemsDisplayed)

@@ -181,50 +181,10 @@
   }
 }
 
-.slideButtonLeft {
-  color: $bgColorLight;
-  font-family: Open Sans;
-  font-size: 16px;
-  font-weight: 500;
-  padding: 10px;
-  background-color: $colorPrimary;
-  border: 1px solid $bgDarkColor;
-  text-decoration: none;
-  cursor: pointer;
-  text-decoration: none;
-  float: left;
-  margin-left: -5px;
-
-  &:active {
-    position: relative;
-    top: 1px;
-  }
-
-  &:focus {
-    outline: 0;
-  }
+.buttonLeft {
+  @extend %slideButtonLeft;
 }
 
-.slideButtonRight {
-  color: $bgColorLight;
-  font-family: Open Sans;
-  font-size: 16px;
-  font-weight: 500;
-  padding: 10px;
-  background-color: $colorPrimary;
-  border: 1px solid $bgDarkColor;
-  text-decoration: none;
-  cursor: pointer;
-  text-decoration: none;
-  float: right;
-  margin-right: -5px;
-
-  &:active {
-    position: relative;
-    top: 1px;
-  }
-
-  &:focus {
-    outline: 0;
-  }
+.buttonRight {
+  @extend %slideButtonRight;
 }
