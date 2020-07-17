@@ -47,7 +47,13 @@ const FurnitureGallery = () => (
                 data-toggle='tooltip'
                 title='Add to Favorites'
               >
-                <FontAwesomeIcon icon={regularFaHeart} />
+                <div className={styles.selectIconHeart}>
+                  <FontAwesomeIcon
+                    className={styles.regularHeart}
+                    icon={regularFaHeart}
+                  />
+                  <FontAwesomeIcon className={styles.heart} icon={faHeart} />
+                </div>
               </div>
               <div
                 className={styles.iconBox}
@@ -73,11 +79,41 @@ const FurnitureGallery = () => (
                 <div className={styles.triangleBottomRight}></div>
                 <span>Aeneon Ru Bristique</span>
                 <div className={styles.iconStars}>
-                  <FontAwesomeIcon icon={faStar} />
-                  <FontAwesomeIcon icon={faStar} />
-                  <FontAwesomeIcon icon={faStar} />
-                  <FontAwesomeIcon icon={regularFaStar} />
-                  <FontAwesomeIcon icon={regularFaStar} />
+                  <div className={styles.selectIconStar}>
+                    <FontAwesomeIcon className={styles.star} icon={faStar} />
+                    <FontAwesomeIcon
+                      className={styles.regularStar}
+                      icon={regularFaStar}
+                    />
+                  </div>
+                  <div className={styles.selectIconStar}>
+                    <FontAwesomeIcon className={styles.star} icon={faStar} />
+                    <FontAwesomeIcon
+                      className={styles.regularStar}
+                      icon={regularFaStar}
+                    />
+                  </div>
+                  <div className={styles.selectIconStar}>
+                    <FontAwesomeIcon className={styles.star} icon={faStar} />
+                    <FontAwesomeIcon
+                      className={styles.regularStar}
+                      icon={regularFaStar}
+                    />
+                  </div>
+                  <div className={styles.selectIconStar}>
+                    <FontAwesomeIcon className={styles.star} icon={faStar} />
+                    <FontAwesomeIcon
+                      className={styles.regularStar}
+                      icon={regularFaStar}
+                    />
+                  </div>
+                  <div className={styles.selectIconStar}>
+                    <FontAwesomeIcon className={styles.star} icon={faStar} />
+                    <FontAwesomeIcon
+                      className={styles.regularStar}
+                      icon={regularFaStar}
+                    />
+                  </div>
                 </div>
               </div>
             </div>

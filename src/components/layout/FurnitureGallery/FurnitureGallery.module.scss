@@ -92,14 +92,46 @@
     border: 1px solid $colorGray;
 
     &:hover {
-      color: $primary;
+      color: white;
+      background-color: $primary;
       border-color: $primary;
+    }
+    .selectIconHeart {
+      .heart {
+        display: none;
+      }
+      &:hover {
+        .heart {
+          display: inline-block;
+        }
+        .regularHeart {
+          display: none;
+        }
+      }
     }
 
     svg {
       font-size: 20px;
       margin-top: 10px;
       vertical-align: 0 !important;
+    }
+  }
+}
+.iconStars {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+  .selectIconStar {
+    .star {
+      display: none;
+    }
+  }
+  .selectIconStar:hover, .selectIconStar:hover~.selectIconStar {
+    .regularStar {
+      display: none;
+    }
+    .star {
+      display: inline-block;
     }
   }
 }

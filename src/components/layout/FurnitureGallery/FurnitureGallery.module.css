@@ -83,13 +83,38 @@
   border: 1px solid #434343;
 }
 .iconsBox .iconBox:hover {
-  color: #d58e32;
+  color: white;
+  background-color: #d58e32;
   border-color: #d58e32;
+}
+.iconsBox .iconBox .selectIconHeart .heart {
+  display: none;
+}
+.iconsBox .iconBox .selectIconHeart:hover .heart {
+  display: inline-block;
+}
+.iconsBox .iconBox .selectIconHeart:hover .regularHeart {
+  display: none;
 }
 .iconsBox .iconBox svg {
   font-size: 20px;
   margin-top: 10px;
   vertical-align: 0 !important;
+}
+
+.iconStars {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+}
+.iconStars .selectIconStar .star {
+  display: none;
+}
+.iconStars .selectIconStar:hover .regularStar, .iconStars .selectIconStar:hover ~ .selectIconStar .regularStar {
+  display: none;
+}
+.iconStars .selectIconStar:hover .star, .iconStars .selectIconStar:hover ~ .selectIconStar .star {
+  display: inline-block;
 }
 
 .infoBox {
