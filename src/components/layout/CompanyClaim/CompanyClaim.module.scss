@@ -3,7 +3,7 @@
 .root {
   background-color: $header-bg;
 
-  :global(.container) > :global(.row) {
+  :global(.container)> :global(.row) {
     height: 145px;
   }
 
@@ -78,6 +78,7 @@
     img {
       margin-bottom: 60px;
     }
+
     .phoneNumber {
       position: absolute;
       margin-top: 20px;
@@ -86,7 +87,6 @@
 
       p {
         font-size: 14px;
-
 
         .icon {
           font-size: 18px;
@@ -97,6 +97,44 @@
     .cart {
       margin-bottom: 60px;
       margin-right: 30px;
+    }
+  }
+}
+
+@media (max-width: 357px) {
+  .root {
+    img {
+      width: 90px;
+    }
+
+    .phoneNumber {
+      p {
+        text-align: center;
+
+        .icon {
+          font-size: 18px;
+        }
+      }
+    }
+
+    .cart {
+      .cartBox {
+        .cartIcon {
+          width: 35px;
+          height: 35px;
+          font-size: 18px;
+
+          .icon {
+            margin-right: 2px;
+          }
+        }
+
+        .cartCounter {
+          width: 30px;
+          height: 14px;
+          right: -8px;
+        }
+      }
     }
   }
 }

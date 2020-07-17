@@ -25,8 +25,8 @@ class MenuBar extends Component {
     return (
       <div className={styles.root}>
         <div className='container'>
-          <div className='d-flex flex-row flex-sm-column-reverse flex-lg-row align-items-center'>
-            <div className='col'>
+          <div className='d-flex flex-row flex-sm-column-reverse flex-lg-row align-items-center justify-content-center'>
+            <div className=''>
               <ProductSearch />
             </div>
             <Button
@@ -53,7 +53,9 @@ class MenuBar extends Component {
               </Button>
               <ul>
                 <li>
-                  <a href='#' className={styles.active}>Home</a>
+                  <a href='#' className={styles.active}>
+                    Home
+                  </a>
                 </li>
                 <li>
                   <a href='#'>Furniture</a>

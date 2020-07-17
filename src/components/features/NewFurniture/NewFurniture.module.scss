@@ -193,11 +193,13 @@
   cursor: pointer;
   text-decoration: none;
   float: left;
+  margin-left: -5px;
 
   &:active {
     position: relative;
     top: 1px;
   }
+
   &:focus {
     outline: 0;
   }
@@ -215,11 +217,13 @@
   cursor: pointer;
   text-decoration: none;
   float: right;
+  margin-right: -5px;
 
   &:active {
     position: relative;
     top: 1px;
   }
+
   &:focus {
     outline: 0;
   }

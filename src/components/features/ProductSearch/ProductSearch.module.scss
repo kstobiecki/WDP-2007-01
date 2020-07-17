@@ -13,6 +13,7 @@
     position: relative;
     min-width: 200px;
 
+
     &:hover .dropdownContent {
       display: block;
     }
@@ -48,10 +49,6 @@
       left: 0;
       top: 0;
       transform: translate(-31%, 17%);
-
-      @media (max-width: 425px) {
-        width: 60px;
-      }
 
       &:hover {
         color: $primary;
@@ -113,10 +110,6 @@
       outline: none;
       max-width: 220px;
 
-      @media (max-width: 425px) {
-        width: 140px;
-      }
-
       &::placeholder {
         color: $text-color;
       }
@@ -130,3 +123,32 @@
     }
   }
 }
+
+@media (max-width: 491px) {
+  .root {
+    height: 90px;
+    display: flex;
+    flex-direction: column-reverse;
+    width: 201px;
+
+    .searchField {
+      margin-bottom: 5px;
+      padding-bottom: 8px;
+      padding-left: 1px;
+      border-bottom: 1px solid $form-border-color;
+      button {
+    
+        transform: translateX(-80%);
+      }
+    }
+
+    .category {
+   padding-top: -12px;
+      .dropdownContent {
+        transform: translate(-31%, 17%);
+      }
+    }
+  }
+}
+
+
