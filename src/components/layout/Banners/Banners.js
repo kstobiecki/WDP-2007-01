@@ -59,6 +59,7 @@ class Banners extends React.Component {
             >
               <FontAwesomeIcon
                 icon={faAngleLeft}
+                className={styles.buttonLeft}
                 onClick={() =>
                   this.handlePageChange(activePage > 0 ? activePage - 1 : 0)
                 }
@@ -85,6 +86,7 @@ class Banners extends React.Component {
             >
               <FontAwesomeIcon
                 icon={faAngleRight}
+                className={styles.buttonRight}
                 onClick={() =>
                   this.handlePageChange(
                     activePage + 1 < pagesCount ? activePage + 1 : activePage

@@ -1,18 +1,16 @@
 @import "../../../styles/settings.scss";
 
-
 .bannersWrapper {
   padding: 1rem 0;
   margin: 2rem 0;
-  border-top: 1px solid  #e1e1e1;
-  border-bottom: 1px solid  #e1e1e1;
+  border-top: 1px solid #e1e1e1;
+  border-bottom: 1px solid #e1e1e1;
 
-  .iconWrapper {
-    background-color: $footer-bg;
-    cursor: pointer;
-    svg {
-      color: white;
-    }
+  .buttonLeft {
+    @extend %slideButtonLeft;
   }
-
+  
+  .buttonRight {
+    @extend %slideButtonRight;
+  }
 }
