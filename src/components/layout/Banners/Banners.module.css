@@ -1,0 +1,15 @@
+.bannersWrapper {
+  padding: 1rem 0;
+  margin: 2rem 0;
+  border-top: 1px solid #e1e1e1;
+  border-bottom: 1px solid #e1e1e1;
+}
+.bannersWrapper .iconWrapper {
+  background-color: #363636;
+  cursor: pointer;
+}
+.bannersWrapper .iconWrapper svg {
+  color: white;
+}
+
+/*# sourceMappingURL=Banners.module.css.map */

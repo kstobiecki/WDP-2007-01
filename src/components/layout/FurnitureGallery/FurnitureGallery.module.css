@@ -1,0 +1,235 @@
+.heading {
+  position: relative;
+}
+.heading h3 {
+  color: #d58e32;
+  text-transform: uppercase;
+  font-size: 20px;
+  line-height: 38px;
+  margin: 0;
+  letter-spacing: 1px;
+  width: 100%;
+}
+.heading::before {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 45px;
+  border-bottom: 4px solid #d58e32;
+}
+
+.panelBar {
+  margin-bottom: 30px;
+  position: relative;
+  background-color: white;
+}
+.panelBar :global(.row) > * {
+  border-bottom: 4px solid #e1e1e1;
+  width: 100%;
+}
+
+.productBox {
+  padding: 0 15px;
+  border: 2px solid #e1e1e1;
+  border-top: 0;
+  background-color: #e1e1e1;
+}
+.productBox .nameBox {
+  text-transform: uppercase;
+  font-weight: bold;
+  background-color: white;
+}
+.productBox .nameBox .element {
+  border: 2px solid #e1e1e1;
+  border-left: 0;
+  width: 25%;
+  text-align: center;
+  padding: 10px 0;
+}
+.productBox .nameBox .element:last-child {
+  border-right: none;
+}
+.productBox .nameBox .element:hover {
+  background: #e1e1e1;
+  border-top: 2px solid #d58e32;
+  color: #d58e32;
+}
+
+.leftBox {
+  position: relative;
+  background-color: #e1e1e1;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 500px;
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.iconsBox {
+  width: 40px;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.iconsBox .iconBox {
+  padding-left: 8px;
+  margin-top: 10px;
+  border: 1px solid #434343;
+}
+.iconsBox .iconBox:hover {
+  color: white;
+  background-color: #d58e32;
+  border-color: #d58e32;
+}
+.iconsBox .iconBox .selectIconHeart .heart {
+  display: none;
+}
+.iconsBox .iconBox .selectIconHeart:hover .heart {
+  display: inline-block;
+}
+.iconsBox .iconBox .selectIconHeart:hover .regularHeart {
+  display: none;
+}
+.iconsBox .iconBox svg {
+  font-size: 20px;
+  margin-top: 10px;
+  vertical-align: 0 !important;
+}
+
+.iconStars {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+}
+.iconStars .selectIconStar .star {
+  display: none;
+}
+.iconStars .selectIconStar:hover .regularStar, .iconStars .selectIconStar:hover ~ .selectIconStar .regularStar {
+  display: none;
+}
+.iconStars .selectIconStar:hover .star, .iconStars .selectIconStar:hover ~ .selectIconStar .star {
+  display: inline-block;
+}
+
+.infoBox {
+  padding-top: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.infoBox .circleText {
+  z-index: 999;
+  position: relative;
+  background-color: #434343;
+  opacity: 0.9;
+  height: 120px;
+  width: 120px;
+  border-radius: 60px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: #ffffff;
+  margin-bottom: -20px;
+}
+.infoBox .circleText .circleTextOne {
+  font-size: 22px;
+}
+.infoBox .circleText .circleTextTwo {
+  text-decoration: line-through;
+  font-size: 16px;
+}
+.infoBox .rectangleText {
+  z-index: 1;
+  position: relative;
+  background-color: #ffffff;
+  width: 250px;
+  height: 100px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-shadow: 2px 4px 10px 4px rgba(67, 67, 67, 0.35);
+}
+.infoBox .rectangleText .triangleTopLeft {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 0;
+  border-top: 30px solid #363636;
+  border-right: 30px solid transparent;
+}
+.infoBox .rectangleText .triangleBottomRight {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 0;
+  height: 0;
+  border-bottom: 30px solid #363636;
+  border-left: 30px solid transparent;
+}
+
+.bannersWrapper {
+  height: 70px;
+}
+.bannersWrapper img {
+  width: 800px;
+  height: 70px;
+  opacity: 0.4;
+}
+.bannersWrapper .overlay {
+  background-color: white;
+}
+.bannersWrapper .active img, .bannersWrapper :hover img {
+  opacity: 1;
+}
+
+.iconWrapper {
+  background-color: #363636;
+  cursor: pointer;
+  padding: 0 15px;
+}
+.iconWrapper svg {
+  color: white;
+}
+
+.photoRight {
+  background-color: #e9edf8;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  height: 100%;
+  width: 100%;
+}
+
+.textElements {
+  padding: 90px 0 0 80px;
+}
+.textElements .textFrom {
+  text-transform: uppercase;
+  font-size: 20px;
+}
+.textElements .textPrice {
+  color: #7aae30;
+  font-size: 45px;
+  font-weight: 600;
+}
+.textElements .textProduct {
+  color: #d58e34;
+  font-size: 45px;
+  font-weight: 600;
+  padding-bottom: 30px;
+}
+.textElements .button {
+  background-color: #7aae30;
+  text-transform: uppercase;
+}
+
+/*# sourceMappingURL=FurnitureGallery.module.css.map */

@@ -5,6 +5,7 @@ import Header from '../Header/Header';
 import Footer from '../Footer/Footer';
 import Banners from '../Banners/BannersContainer';
 import Feedback from '../Feedback/FeedbackContainer';
+import FurnitureGallery from '../FurnitureGallery/FurnitureGallery';
 
 class MainLayout extends Component {
   componentDidMount() {
@@ -37,6 +38,7 @@ class MainLayout extends Component {
       <div>
         <Header />
         {children}
+        <FurnitureGallery />
         <Banners />
         <Feedback />
         <Footer />
