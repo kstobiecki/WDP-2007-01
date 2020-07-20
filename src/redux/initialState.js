@@ -664,6 +664,55 @@ const initialState = {
       description: 'Furniture client',
     },
   ],
+
+  options: {
+    currencies: [
+      {
+        active: true,
+        value: 'USD',
+      },
+      {
+        active: false,
+        value: 'GBP',
+      },
+      {
+        active: false,
+        value: 'EUR',
+      },
+    ],
+    language: [
+      {
+        active: true,
+        value: 'English',
+      },
+      {
+        active: false,
+        value: 'Polski',
+      },
+      {
+        active: false,
+        value: 'Francais',
+      },
+    ],
+    clientService: [
+      {
+        active: true,
+        value: 'Help',
+      },
+      {
+        active: false,
+        value: 'FAQ',
+      },
+      {
+        active: false,
+        value: 'Contact',
+      },
+      {
+        active: false,
+        value: 'Terms & Conditions',
+      },
+    ],
+  },
 };
 
 export default initialState;

@@ -16,7 +16,7 @@ class Banners extends React.Component {
   handlePageChange(newPage) {
     setTimeout(() => {
       this.setState({ activePage: newPage });
-    }, 100);
+    }, 200);
   }
 
   render() {
