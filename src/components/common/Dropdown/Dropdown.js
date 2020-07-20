@@ -6,7 +6,7 @@ import { faCaretDown } from '@fortawesome/free-solid-svg-icons';
 
 import styles from './Dropdown.module.scss';
 
-function Dropdown({ options, changeSiteOption }) {
+function Dropdown({ option, changeSiteOption }) {
   const [open, setOpen] = useState(false);
   const toggle = () => setOpen(!open);
   const node = useRef();
@@ -14,10 +14,10 @@ function Dropdown({ options, changeSiteOption }) {
   const handleClick = value => {
     toggle(!open);
 
-    const currentlyActive = options
+    const currentlyActive = option
       .filter(item => item.active === true)
       .map(filteredItem => (filteredItem.active = false));
-    const newActive = options
+    const newActive = option
       .filter(item => item.value === value)
       .map(filteredItem => (filteredItem.active = true));
 
@@ -44,7 +44,7 @@ function Dropdown({ options, changeSiteOption }) {
     <div className={styles.wrapper} ref={node}>
       <div className={styles.header} role='button' onClick={() => toggle(!open)}>
         <div>
-          {options
+          {option
             .filter(item => item.active === true)
             .map(filteredItem => (
               <a href='#' key={filteredItem.value}>
@@ -59,7 +59,7 @@ function Dropdown({ options, changeSiteOption }) {
       </div>
       {open && (
         <ul className={styles.list}>
-          {options.map(item => (
+          {option.map(item => (
             <li key={item.value} onClick={() => handleClick(item.value)}>
               <button type='button'>
                 <span>{item.value}</span>
@@ -73,7 +73,7 @@ function Dropdown({ options, changeSiteOption }) {
 }
 
 Dropdown.propTypes = {
-  options: PropTypes.array,
+  option: PropTypes.array,
   changeSiteOption: PropTypes.func,
 };
 

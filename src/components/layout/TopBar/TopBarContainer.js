@@ -1,9 +1,16 @@
 import { connect } from 'react-redux';
 import TopBar from './TopBar';
-import { getAll, changeSiteOption } from '../../../redux/siteOptionsRedux';
+import {
+  getAllCurrencies,
+  getAllLanguages,
+  getAllClientService,
+  changeSiteOption,
+} from '../../../redux/siteOptionsRedux';
 
 const mapStateToProps = state => ({
-  options: getAll(state),
+  currencies: getAllCurrencies(state),
+  language: getAllLanguages(state),
+  clientService: getAllClientService(state),
 });
 
 const mapDispatchToProps = dispatch => ({

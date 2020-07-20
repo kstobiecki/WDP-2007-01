@@ -1,5 +1,7 @@
 /* selectors */
-export const getAll = ({ options }) => options;
+export const getAllCurrencies = ({ currencies }) => currencies;
+export const getAllLanguages = ({ language }) => language;
+export const getAllClientService = ({ clientService }) => clientService;
 
 /* action name creator */
 const reducerName = 'options';

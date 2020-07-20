@@ -7,22 +7,22 @@ import Dropdown from '../../common/Dropdown/Dropdown';
 
 import styles from './TopBar.module.scss';
 
-function TopBar({ options, changeSiteOption }) {
+function TopBar({ language, clientService, currencies, changeSiteOption }) {
   return (
     <div className={styles.root}>
       <div className='container'>
         <div className='row'>
           <div className={`col text-left ${styles.topOptions}`}>
             <ul>
-              {/* <li>
-                <Dropdown options={options.currencies} changeSiteOption={changeSiteOption}/>
+              <li>
+                <Dropdown option={currencies} changeSiteOption={changeSiteOption} />
               </li>
               <li>
-                <Dropdown options={options.language} changeSiteOption={changeSiteOption}/>
+                <Dropdown option={language} changeSiteOption={changeSiteOption} />
               </li>
               <li>
-                <Dropdown options={options.clientService} changeSiteOption={changeSiteOption}/>
-              </li> */}
+                <Dropdown option={clientService} changeSiteOption={changeSiteOption} />
+              </li>
             </ul>
           </div>
           <div className={`col-4 text-left col-sm text-right  ${styles.topMenu}`}>
@@ -53,7 +53,9 @@ function TopBar({ options, changeSiteOption }) {
 }
 
 TopBar.propTypes = {
-  options: PropTypes.object,
+  language: PropTypes.array,
+  currencies: PropTypes.array,
+  clientService: PropTypes.array,
   changeSiteOption: PropTypes.func,
 };
 
