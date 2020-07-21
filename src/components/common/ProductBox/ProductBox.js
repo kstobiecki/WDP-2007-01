@@ -7,7 +7,6 @@ import { faExchangeAlt, faShoppingBasket } from '@fortawesome/free-solid-svg-ico
 import { faStar as faHeart } from '@fortawesome/free-regular-svg-icons';
 import Button from '../Button/Button';
 import Ratings from '../../features/Ratings/RatingsContainer.js';
-import { render } from 'enzyme';
 
 function ProductBox({
   name,
@@ -34,7 +33,7 @@ function ProductBox({
   return (
     <div className={styles.root}>
       <div className={styles.photo}>
-        <img className={styles.image} src={photo} />
+        <img className={styles.image} src={photo} alt='product-bed' />
         {promo && <div className={styles.sale}>{promo}</div>}
         <div className={styles.buttons}>
           <Button variant='small'>Quick View</Button>
@@ -87,8 +86,8 @@ ProductBox.propTypes = {
   children: PropTypes.node,
   name: PropTypes.string,
   price: PropTypes.number,
-  oldPrice: PropTypes.number,
-  promo: PropTypes.string,
+  oldPrice: PropTypes.oneOfType([PropTypes.number, PropTypes.bool]),
+  promo: PropTypes.oneOfType([PropTypes.string, PropTypes.bool]),
   stars: PropTypes.number,
   userStars: PropTypes.number,
   favorite: PropTypes.bool,
