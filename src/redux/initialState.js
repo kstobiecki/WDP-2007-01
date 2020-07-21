@@ -562,6 +562,22 @@ const initialState = {
   cart: {
     products: [],
   },
+
+  promotingProducts: {
+    leftSide: {
+      src: 'https://i.postimg.cc/W4RvqLDB/kse.png',
+      name: 'Aenean Ru Bristique',
+      priceBefore: '$350.00',
+      priceAfter: '$300.00',
+    },
+    rightSide: {
+      title1: 'Indoor ',
+      title2: 'furniture',
+      subtitle: 'save up to 50% of all furniture',
+      src: 'https://i.postimg.cc/NMp2DZ0p/33.png',
+    },
+  },
+
   banners: [
     {
       src: 'https://i.postimg.cc/GmP3ZqKN/1.png',

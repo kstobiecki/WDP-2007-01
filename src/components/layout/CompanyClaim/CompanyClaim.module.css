@@ -82,5 +82,29 @@
     margin-right: 30px;
   }
 }
+@media (max-width: 357px) {
+  .root img {
+    width: 90px;
+  }
+  .root .phoneNumber p {
+    text-align: center;
+  }
+  .root .phoneNumber p .icon {
+    font-size: 18px;
+  }
+  .root .cart .cartBox .cartIcon {
+    width: 35px;
+    height: 35px;
+    font-size: 18px;
+  }
+  .root .cart .cartBox .cartIcon .icon {
+    margin-right: 2px;
+  }
+  .root .cart .cartBox .cartCounter {
+    width: 30px;
+    height: 14px;
+    right: -8px;
+  }
+}
 
 /*# sourceMappingURL=CompanyClaim.module.css.map */

@@ -1,0 +1,177 @@
+.leftSide {
+  width: 33%;
+  margin-top: 30px;
+  border: 2px solid #e1e1e1;
+}
+
+.topMenu {
+  background-color: #363636;
+  height: 50px;
+  width: 100%;
+  margin: 0;
+}
+.topMenu .text {
+  color: #ffffff;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+.topMenu .dots {
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 15px;
+}
+.topMenu .dots ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.topMenu .dots li {
+  padding: 0;
+  color: #ffffff;
+  font-size: 13px;
+  margin-left: 0.5rem;
+  cursor: pointer;
+}
+.topMenu .dots li.active, .topMenu .dots li:hover {
+  color: #d58e32;
+}
+
+.productImage {
+  height: 400px;
+  width: 100%;
+  background-color: #e1e1e1;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.aboutProduct {
+  flex-direction: column;
+  padding: 15px 0;
+}
+.aboutProduct .productName {
+  font-size: 20px;
+  font-weight: 700;
+  padding-bottom: 10px;
+}
+.aboutProduct .iconsStars {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+}
+.aboutProduct .iconsStars .selectIconStar .star {
+  display: none;
+}
+.aboutProduct .iconsStars .selectIconStar:hover .regularStar, .aboutProduct .iconsStars .selectIconStar:hover ~ .selectIconStar .regularStar {
+  display: none;
+}
+.aboutProduct .iconsStars .selectIconStar:hover .star, .aboutProduct .iconsStars .selectIconStar:hover ~ .selectIconStar .star {
+  display: inline-block;
+}
+
+.elementsBox {
+  padding: 0 15px;
+}
+.elementsBox .fontIcons {
+  flex-direction: row;
+}
+.elementsBox .fontIcons .iconBox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 35px;
+  height: 35px;
+  border: 1px solid #434343;
+  margin-right: 5px;
+}
+.elementsBox .fontIcons .iconBox:hover {
+  color: white;
+  background-color: #d58e32;
+  border-color: #d58e32;
+}
+.elementsBox .fontIcons .iconBox .selectIconHeart .heart {
+  display: none;
+}
+.elementsBox .fontIcons .iconBox .selectIconHeart:hover .heart {
+  display: block;
+}
+.elementsBox .fontIcons .iconBox .selectIconHeart:hover .regularHeart {
+  display: none;
+}
+.elementsBox .fontIcons .iconBox svg {
+  font-size: 20px;
+  vertical-align: 0 !important;
+}
+
+.priceIcons .priceBefore {
+  text-decoration: line-through;
+  padding-right: 8px;
+}
+.priceIcons .priceAfter {
+  padding: 10px;
+  font-size: 18px;
+}
+
+.rightSide {
+  width: 65%;
+  margin-top: 30px;
+}
+
+.photoRight {
+  background-color: #ffffff;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center top;
+  height: 600px;
+  width: 100%;
+}
+.photoRight .textElements {
+  position: relative;
+  padding-top: 60px;
+  padding-bottom: 50px;
+  width: 100%;
+  background-color: rgba(42, 42, 42, 0.7);
+  text-transform: uppercase;
+  flex-direction: column;
+}
+.photoRight .textElements .title {
+  font-size: 50px;
+  color: #ffffff;
+}
+.photoRight .textElements .title span {
+  font-weight: bold;
+}
+.photoRight .textElements .subtitle {
+  color: #ffffff;
+  font-size: 20px;
+}
+.photoRight .textElements .buttonShopNow {
+  position: absolute;
+  font-size: 15px;
+  font-weight: 700;
+  margin-bottom: -200px;
+}
+
+.buttonShopNow {
+  background-color: #ffffff;
+  color: #2a2a2a;
+}
+.buttonShopNow:hover {
+  background-color: #d58e32;
+  color: #ffffff;
+}
+
+.iconWrapper {
+  background-color: #363636;
+  cursor: pointer;
+  width: 100%;
+  height: 40px;
+}
+.iconWrapper svg {
+  color: white;
+}
+.iconWrapper:hover {
+  background-color: #d58e32;
+}
+
+/*# sourceMappingURL=PromotingProducts.module.css.map */

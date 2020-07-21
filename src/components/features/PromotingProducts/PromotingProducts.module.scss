@@ -1,0 +1,195 @@
+@import "../../../styles/settings.scss";
+
+.leftSide {
+  width: 33%;
+  margin-top: 30px;
+  border: 2px solid $form-border-color-soft;
+}
+
+.topMenu {
+  background-color: $footer-bg;
+  height: 50px;
+  width: 100%;
+  margin: 0;
+  .text {
+    color: $main-light;
+    text-transform: uppercase;
+    font-weight: 700;
+  }
+  .dots {
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 15px;
+    ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+
+    }
+    li {
+      padding: 0;
+      color: $main-light;
+      font-size: 13px;
+      margin-left: 0.5rem;
+      cursor: pointer;
+      &.active,
+      &:hover {
+        color: $primary;
+      }
+    }
+  }
+}
+
+.productImage {
+  height: 400px;
+  width: 100%;
+  background-color: $form-border-color-soft;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.aboutProduct {
+  flex-direction: column;
+  padding: 15px 0;
+  .productName {
+    font-size: 20px;
+    font-weight: 700;
+    padding-bottom: 10px;
+  }
+  .iconsStars {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    .selectIconStar {
+      .star {
+        display: none;
+      }
+    }
+    .selectIconStar:hover, .selectIconStar:hover~.selectIconStar {
+      .regularStar {
+        display: none;
+      }
+      .star {
+        display: inline-block;
+      }
+    }
+  }
+}
+
+.elementsBox {
+  padding: 0 15px;
+  .fontIcons {
+    flex-direction: row;
+
+    .iconBox {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 35px;
+      height: 35px;
+      border: 1px solid $colorGray;
+      margin-right: 5px;
+
+      &:hover {
+        color: white;
+        background-color: $primary;
+        border-color: $primary;
+      }
+
+      .selectIconHeart {
+        .heart {
+          display: none;
+        }
+
+        &:hover {
+          .heart {
+            display: block;
+          }
+
+          .regularHeart {
+            display: none;
+          }
+        }
+      }
+
+      svg {
+        font-size: 20px;
+        vertical-align: 0 !important;
+      }
+    }
+  }
+}
+
+.priceIcons {
+  .priceBefore {
+    text-decoration: line-through;
+    padding-right: 8px;
+  }
+  .priceAfter {
+    padding: 10px;
+    font-size: 18px;
+  }
+}
+
+.rightSide {
+  width: 65%;
+  margin-top: 30px;
+}
+
+.photoRight {
+  background-color: $main-light;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center top;
+  height: 600px;
+  width: 100%;
+  .textElements {
+    position: relative;
+    padding-top: 60px;
+    padding-bottom: 50px;
+    width: 100%;
+    background-color: rgba($colorDark, 0.70) ;
+    text-transform: uppercase;
+    flex-direction: column;
+    .title {
+      font-size: 50px;
+      color: $main-light;
+      span {
+        font-weight: bold;
+      }
+    }
+    .subtitle {
+      color: $main-light;
+      font-size: 20px;
+    }
+    .buttonShopNow {
+      position: absolute;
+      font-size: 15px;
+      font-weight: 700;
+      margin-bottom: -200px;
+    }
+  }
+}
+
+.buttonShopNow {
+  background-color: $main-light;
+  color: $text-color;
+  &:hover {
+    background-color: $primary;
+    color: $main-light;
+  }
+}
+
+.iconWrapper {
+  background-color: $footer-bg;
+  cursor: pointer;
+  width: 100%;
+  height: 40px;
+  svg {
+    color: white;
+  }
+  &:hover {
+    background-color: $primary;
+  }
+}

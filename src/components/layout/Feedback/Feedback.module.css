@@ -1,3 +1,27 @@
+.root .buttonLeft {
+  background-color: #363636;
+  color: #ffffff;
+  font-size: 35px;
+  border-radius: 4px;
+  height: 75px;
+  padding-left: 4px;
+  padding-right: 4px;
+  cursor: pointer;
+  float: left;
+}
+
+.root .buttonRight {
+  background-color: #363636;
+  color: #ffffff;
+  font-size: 35px;
+  border-radius: 4px;
+  height: 75px;
+  padding-left: 4px;
+  padding-right: 4px;
+  cursor: pointer;
+  float: right;
+}
+
 .root .panelBar {
   margin-bottom: 30px;
   position: relative;
@@ -62,7 +86,7 @@
 }
 .root .wrapper .text {
   margin: 0 0 2rem 0;
-  padding: 0 90px 0 50px;
+  padding: 0 50px 0 50px;
 }
 .root .wrapper img {
   width: 100px;
@@ -76,45 +100,13 @@
   text-align: left;
   font-weight: 600;
 }
-.root .slideButtonLeft {
-  color: #f4f5f7;
-  font-family: Open Sans;
-  font-size: 16px;
-  font-weight: 500;
-  padding: 10px;
-  background-color: #d58e32;
-  border: 1px solid #292929;
-  text-decoration: none;
-  cursor: pointer;
-  text-decoration: none;
-  float: left;
-}
-.root .slideButtonLeft:active {
-  position: relative;
-  top: 1px;
-}
-.root .slideButtonLeft:focus {
-  outline: 0;
-}
-.root .slideButtonRight {
-  color: #f4f5f7;
-  font-family: Open Sans;
-  font-size: 16px;
-  font-weight: 500;
-  padding: 10px;
-  background-color: #d58e32;
-  border: 1px solid #292929;
-  text-decoration: none;
-  cursor: pointer;
-  text-decoration: none;
-  float: right;
-}
-.root .slideButtonRight:active {
-  position: relative;
-  top: 1px;
-}
-.root .slideButtonRight:focus {
-  outline: 0;
+@media (max-width: 500px) {
+  .root .wrapper {
+    text-align: center;
+  }
+  .root .wrapper .text {
+    padding: 0 20px 0 20px;
+  }
 }
 
 /*# sourceMappingURL=Feedback.module.css.map */
