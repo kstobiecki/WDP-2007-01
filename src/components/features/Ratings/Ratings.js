@@ -5,7 +5,6 @@ import styles from './Ratings.module.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faStar } from '@fortawesome/free-solid-svg-icons';
 import { faStar as farStar } from '@fortawesome/free-regular-svg-icons';
-import { render } from 'enzyme';
 
 function Raitings({ stars, userStars, id, rateProduct }) {
   const [raiting, setState] = useState(0);
@@ -52,7 +51,7 @@ function Raitings({ stars, userStars, id, rateProduct }) {
       {[1, 2, 3, 4, 5].map(i => (
         <a
           key={i}
-          href='#'
+          href='/#'
           onClick={event => handleRating(i, id, event)}
           onMouseOver={() => setState(i)}
           onMouseOut={() => setState(0)}

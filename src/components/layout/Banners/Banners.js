@@ -102,7 +102,7 @@ class Banners extends React.Component {
 }
 Banners.propTypes = {
   banners: PropTypes.array,
-  viewPort: PropTypes.string,
+  viewPort: PropTypes.oneOfType([PropTypes.array, PropTypes.object]),
 };
 
 export default Banners;

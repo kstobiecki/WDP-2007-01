@@ -28,19 +28,19 @@ function TopBar({ language, clientService, currencies, changeSiteOption }) {
           <div className={`col-4 text-left col-sm text-right  ${styles.topMenu}`}>
             <ul>
               <li>
-                <a href='#'>
+                <a href='/#'>
                   <FontAwesomeIcon className={`icons ${styles.icon}`} icon={faUser} />
                   <span>Login</span>
                 </a>
               </li>
               <li>
-                <a href='#'>
+                <a href='/#'>
                   <FontAwesomeIcon className={styles.icon} icon={faLock} />
                   <span>Register</span>
                 </a>
               </li>
               <li>
-                <a href='#'>
+                <a href='/#'>
                   <FontAwesomeIcon className={styles.icon} icon={faBars} />
                 </a>
               </li>

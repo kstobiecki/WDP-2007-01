@@ -47,7 +47,7 @@ function Dropdown({ option, changeSiteOption }) {
           {option
             .filter(item => item.active === true)
             .map(filteredItem => (
-              <a href='#' key={filteredItem.value}>
+              <a href='/#' key={filteredItem.value}>
                 {filteredItem.value}{' '}
                 <FontAwesomeIcon
                   className={styles.icon}

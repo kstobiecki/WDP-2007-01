@@ -19,7 +19,7 @@ const ProductsToCompareBox = ({ name, id, photo, toggleCompare, compare }) => (
         <FontAwesomeIcon className={styles.iconTimes} icon={faTimes} />
       </Button>
     </div>
-    <img className='img-fluid' src={photo} />
+    <img className='img-fluid' src={photo} alt='compared-product' />
     <div className={styles.comparableName}>{name}</div>
   </div>
 );
