@@ -16,6 +16,7 @@ import {
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Button from '../../common/Button/Button';
+import { UncontrolledTooltip } from 'reactstrap';
 
 const FurnitureGallery = () => (
   <div className='container'>
@@ -42,11 +43,7 @@ const FurnitureGallery = () => (
             }}
           >
             <div className={styles.iconsBox}>
-              <div
-                className={styles.iconBox}
-                data-toggle='tooltip'
-                title='Add to Favorites'
-              >
+              <div className={styles.iconBox} id='furnitureGallery-addToFavorites'>
                 <div className={styles.selectIconHeart}>
                   <FontAwesomeIcon
                     className={styles.regularHeart}
@@ -55,19 +52,27 @@ const FurnitureGallery = () => (
                   <FontAwesomeIcon className={styles.heart} icon={faHeart} />
                 </div>
               </div>
-              <div
-                className={styles.iconBox}
-                data-toggle='tooltip'
-                title='Add to Compare'
-              >
+              <UncontrolledTooltip target='furnitureGallery-addToFavorites'>
+                Add to Favorites
+              </UncontrolledTooltip>
+              <div className={styles.iconBox} id='furnitureGallery-addToCompare'>
                 <FontAwesomeIcon icon={faExchangeAlt} />
               </div>
-              <div className={styles.iconBox} data-toggle='tooltip' title='Quick View'>
+              <UncontrolledTooltip target='furnitureGallery-addToCompare'>
+                Add to Compare
+              </UncontrolledTooltip>
+              <div className={styles.iconBox} id='furnitureGallery-quickView'>
                 <FontAwesomeIcon icon={faEye} />
               </div>
-              <div className={styles.iconBox} data-toggle='tooltip' title='Add to Cart'>
+              <UncontrolledTooltip target='furnitureGallery-quickView'>
+                Quick View
+              </UncontrolledTooltip>
+              <div className={styles.iconBox} id='furnitureGallery-addToCart'>
                 <FontAwesomeIcon icon={faCartPlus} />
               </div>
+              <UncontrolledTooltip target='furnitureGallery-addToCart'>
+                Add to Cart
+              </UncontrolledTooltip>
             </div>
             <div className={styles.infoBox}>
               <div className={styles.circleText}>

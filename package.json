@@ -64,6 +64,7 @@
     "react-swipe-component": "^3.0.0",
     "react-swipeable": "^5.5.1",
     "react-test-renderer": "^16.9.0",
+    "reactstrap": "^8.5.1",
     "redux": "^4.0.4",
     "swiper": "^6.0.2"
   },
