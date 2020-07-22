@@ -13,7 +13,8 @@
 .topMenu .text {
   color: #ffffff;
   text-transform: uppercase;
-  font-weight: 700;
+  font-weight: 600;
+  font-size: 18px;
 }
 .topMenu .dots {
   display: flex;
@@ -43,6 +44,47 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+  flex-direction: column;
+}
+.productImage .buttonAddToCart {
+  display: none;
+  padding: 6px 12px;
+  font-size: 15px;
+  text-transform: uppercase;
+  margin-bottom: 45px;
+  align-items: center;
+}
+.productImage .buttonAddToCart .iconCart {
+  padding-right: 8px;
+  font-size: 23px;
+}
+.productImage .textInCircle {
+  display: none;
+}
+.productImage .textInCircle .textData {
+  margin: 0 3px;
+  flex-direction: column;
+  color: #ffffff;
+  background-color: rgba(42, 42, 42, 0.8);
+  width: 75px;
+  height: 75px;
+  border-radius: 75px;
+}
+.productImage .textInCircle .textData .number {
+  font-size: 27px;
+  font-weight: 700;
+}
+.productImage .textInCircle .textData .unit {
+  text-transform: uppercase;
+  margin-top: -3px;
+  font-size: 15px;
+  font-weight: 600;
+}
+.productImage:hover .buttonAddToCart {
+  display: flex;
+}
+.productImage:hover .textInCircle {
+  display: flex;
 }
 
 .aboutProduct {
@@ -68,6 +110,16 @@
 .aboutProduct .iconsStars .selectIconStar:hover .star, .aboutProduct .iconsStars .selectIconStar:hover ~ .selectIconStar .star {
   display: inline-block;
 }
+.aboutProduct .line {
+  margin: 15px 0;
+  width: 95%;
+  border-top: 4px solid #b6b6b6;
+}
+.aboutProduct .line .innerLine {
+  margin-top: -4px;
+  width: 10%;
+  border-top: 4px solid #d58e32;
+}
 
 .elementsBox {
   padding: 0 15px;
@@ -89,18 +141,17 @@
   background-color: #d58e32;
   border-color: #d58e32;
 }
-.elementsBox .fontIcons .iconBox .selectIconHeart .heart {
-  display: none;
-}
-.elementsBox .fontIcons .iconBox .selectIconHeart:hover .heart {
+.elementsBox .fontIcons .iconBox:hover .selectIconHeart .heart {
   display: block;
 }
-.elementsBox .fontIcons .iconBox .selectIconHeart:hover .regularHeart {
+.elementsBox .fontIcons .iconBox:hover .selectIconHeart .regularHeart {
+  display: none;
+}
+.elementsBox .fontIcons .iconBox .selectIconHeart .heart {
   display: none;
 }
 .elementsBox .fontIcons .iconBox svg {
   font-size: 20px;
-  vertical-align: 0 !important;
 }
 
 .priceIcons .priceBefore {

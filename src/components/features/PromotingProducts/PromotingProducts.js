@@ -12,11 +12,13 @@ import {
   faEye,
   faHeart,
   faExchangeAlt,
+  faCartPlus,
 } from '@fortawesome/free-solid-svg-icons';
 import {
   faHeart as regularFaHeart,
   faStar as regularFaStar,
 } from '@fortawesome/free-regular-svg-icons';
+import { UncontrolledTooltip } from 'reactstrap';
 
 const PromotingProducts = ({ promotingProducts }) => (
   <div className='container'>
@@ -30,7 +32,7 @@ const PromotingProducts = ({ promotingProducts }) => (
           <div className={'col ' + styles.text}>Hot deals</div>
           <div className={'col ' + styles.dots}>
             <ul className='row'>
-              <li className='col'>
+              <li className={'col ' + styles.active}>
                 <FontAwesomeIcon icon={faCircle} />
               </li>
               <li className='col'>
@@ -43,11 +45,56 @@ const PromotingProducts = ({ promotingProducts }) => (
           </div>
         </div>
         <div
-          className={styles.productImage}
+          className={
+            'd-flex align-items-center justify-content-center ' + styles.productImage
+          }
           style={{
             backgroundImage: `url(${promotingProducts.leftSide.src})`,
           }}
-        ></div>
+        >
+          <Button variant='small' className={styles.buttonAddToCart}>
+            <FontAwesomeIcon className={styles.iconCart} icon={faCartPlus} />
+            Add to cart
+          </Button>
+          <div
+            className={
+              'align-items-center justify-content-around ' + styles.textInCircle
+            }
+          >
+            <div
+              className={
+                'd-flex align-items-center justify-content-center ' + styles.textData
+              }
+            >
+              <div className={styles.number}>25</div>
+              <div className={styles.unit}>days</div>
+            </div>
+            <div
+              className={
+                'd-flex align-items-center justify-content-center ' + styles.textData
+              }
+            >
+              <div className={styles.number}>10</div>
+              <div className={styles.unit}>hrs</div>
+            </div>
+            <div
+              className={
+                'd-flex align-items-center justify-content-center ' + styles.textData
+              }
+            >
+              <div className={styles.number}>45</div>
+              <div className={styles.unit}>mins</div>
+            </div>
+            <div
+              className={
+                'd-flex align-items-center justify-content-center ' + styles.textData
+              }
+            >
+              <div className={styles.number}>30</div>
+              <div className={styles.unit}>secs</div>
+            </div>
+          </div>
+        </div>
         <div
           className={
             'd-flex align-items-center justify-content-center ' + styles.aboutProduct
@@ -76,6 +123,13 @@ const PromotingProducts = ({ promotingProducts }) => (
               <FontAwesomeIcon className={styles.regularStar} icon={regularFaStar} />
             </div>
           </div>
+          <div
+            className={
+              'd-flex align-items-center justify-content-center ' + styles.line
+            }
+          >
+            <div className={styles.innerLine} />
+          </div>
         </div>
         <div
           className={
@@ -83,15 +137,13 @@ const PromotingProducts = ({ promotingProducts }) => (
           }
         >
           <div className={'d-flex ' + styles.fontIcons}>
-            <div className={styles.iconBox} data-toggle='tooltip' title='Quick View'>
+            <div className={styles.iconBox} id='promotingProducts-quickView'>
               <FontAwesomeIcon icon={faEye} />
             </div>
-
-            <div
-              className={styles.iconBox}
-              data-toggle='tooltip'
-              title='Add to Favorites'
-            >
+            <UncontrolledTooltip target='promotingProducts-quickView'>
+              Quick View
+            </UncontrolledTooltip>
+            <div className={styles.iconBox} id='promotingProducts-addToFavorites'>
               <div className={styles.selectIconHeart}>
                 <FontAwesomeIcon
                   className={styles.regularHeart}
@@ -100,14 +152,17 @@ const PromotingProducts = ({ promotingProducts }) => (
                 <FontAwesomeIcon className={styles.heart} icon={faHeart} />
               </div>
             </div>
-            <div
-              className={styles.iconBox}
-              data-toggle='tooltip'
-              title='Add to Compare'
-            >
+            <UncontrolledTooltip target='promotingProducts-addToFavorites'>
+              Add to Favorites
+            </UncontrolledTooltip>
+            <div className={styles.iconBox} id='promotingProducts-addToCompare'>
               <FontAwesomeIcon icon={faExchangeAlt} />
             </div>
           </div>
+          <UncontrolledTooltip target='promotingProducts-addToCompare'>
+            Add to Compare
+          </UncontrolledTooltip>
+
           <div className={'d-flex align-items-center ' + styles.priceIcons}>
             <div className={styles.priceBefore}>
               {promotingProducts.leftSide.priceBefore}
