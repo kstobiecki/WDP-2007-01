@@ -252,3 +252,41 @@
     text-transform: uppercase;
   }
 }
+
+@media (max-width: 575px) {
+
+  .photoRight {
+    display: none;
+  }
+
+  .productBox {
+    width: 93vw;
+  }
+
+  .nameBox {
+    font-size: 13px;
+  }
+
+  .iconsBox {
+    margin-top: -300px;
+  }
+
+  .infoBox {
+    margin-bottom: -180px;
+  }
+}
+
+@media (max-width: 768px) {
+
+  .nameBox {
+    font-size: 13px;
+  }
+
+  .iconsBox {
+    margin-top: -300px;
+  }
+
+  .infoBox {
+    margin-bottom: -180px;
+  }
+}
