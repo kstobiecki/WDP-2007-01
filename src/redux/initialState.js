@@ -727,6 +727,35 @@ const initialState = {
       value: 'Terms & Conditions',
     },
   ],
+  galleryPics: [
+    {
+      src: 'https://i.postimg.cc/1z77FMFv/krzeslo.png',
+      alt: 'chair',
+    },
+    {
+      src:
+        'https://i.postimg.cc/g0P5zWrV/Stolik-Kawowy-Sitio-Z-oty-Jasny-D-b-Pakamera-pl.png',
+      alt: 'cofee table',
+    },
+    {
+      src: 'https://i.postimg.cc/1z77FMFv/krzeslo.png',
+      alt: 'chair',
+    },
+    {
+      src:
+        'https://i.postimg.cc/g0P5zWrV/Stolik-Kawowy-Sitio-Z-oty-Jasny-D-b-Pakamera-pl.png',
+      alt: 'chair',
+    },
+    {
+      src: 'https://i.postimg.cc/1z77FMFv/krzeslo.png',
+      alt: 'armchair',
+    },
+    {
+      src:
+        'https://i.postimg.cc/g0P5zWrV/Stolik-Kawowy-Sitio-Z-oty-Jasny-D-b-Pakamera-pl.png',
+      alt: 'chair',
+    },
+  ],
 };
 
 export default initialState;
