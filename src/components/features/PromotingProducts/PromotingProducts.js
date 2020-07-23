@@ -19,11 +19,12 @@ import {
   faStar as regularFaStar,
 } from '@fortawesome/free-regular-svg-icons';
 import { UncontrolledTooltip } from 'reactstrap';
+import SwipeableComp from '../../common/SwipeableComp/SwipeableComp';
 
 const PromotingProducts = ({ promotingProducts }) => (
   <div className='container'>
     <div className='d-flex justify-content-between '>
-      <div className={styles.leftSide}>
+      <div className={'d-none d-lg-block ' + styles.leftSide}>
         <div
           className={
             'row d-flex justify-content-between align-items-center ' + styles.topMenu
@@ -173,8 +174,11 @@ const PromotingProducts = ({ promotingProducts }) => (
           </div>
         </div>
       </div>
-
-      <div className={styles.rightSide}>
+      <SwipeableComp
+        className={styles.rightSide}
+        leftAction={() => console.log('Swipe left!')}
+        rightAction={() => console.log('Swipe right!')}
+      >
         <div
           className={
             'd-flex align-items-center justify-content-center ' + styles.photoRight
@@ -218,7 +222,7 @@ const PromotingProducts = ({ promotingProducts }) => (
             <FontAwesomeIcon icon={faAngleRight} />
           </div>
         </div>
-      </div>
+      </SwipeableComp>
     </div>
   </div>
 );
