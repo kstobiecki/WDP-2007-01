@@ -174,19 +174,56 @@ class FurnitureGallery extends React.Component {
                   >
                     <FontAwesomeIcon icon={faAngleLeft} />
                   </div>
-                  {galleryPics
-                    .slice(activePage, itemsDisplayed + activePage)
-                    .map(galleryPic => (
-                      <div key={galleryPic.src} className={'px-2'}>
-                        {
-                          <img
-                            className={'img-thumbnail img-fluid'}
-                            src={galleryPic.src}
-                            alt={galleryPic.alt}
-                          />
-                        }
-                      </div>
-                    ))}
+                  <div className={'px-1 ' + styles.overlay + ' ' + styles.active}>
+                    <img
+                      alt='chair'
+                      className={'img-thumbnail'}
+                      src={'https://i.postimg.cc/1z77FMFv/krzeslo.png'}
+                    />
+                  </div>
+                  <div className={'px-1 ' + styles.overlay}>
+                    <img
+                      alt='cofee table'
+                      className={'img-thumbnail img-fluid'}
+                      src={
+                        'https://i.postimg.cc/g0P5zWrV/Stolik-Kawowy-Sitio-Z-oty-Jasny-D-b-Pakamera-pl.png'
+                      }
+                    />
+                  </div>
+                  <div className={'px-1 ' + styles.overlay}>
+                    <img
+                      alt='chair'
+                      className={'img-thumbnail img-fluid'}
+                      src={
+                        'https://i.postimg.cc/jdLBvcG7/Luxurious-Custom-Made-Lounge-Chair-circa-1940.jpg'
+                      }
+                    />
+                  </div>
+                  <div className={'px-1 ' + styles.overlay}>
+                    <img
+                      alt='chair'
+                      className={'img-thumbnail img-fluid'}
+                      src={
+                        'https://i.postimg.cc/Y9rsFz6j/Spindle-Cube-Chair-The-Art-Institute-of-Chicago.jpg'
+                      }
+                    />
+                  </div>
+                  <div className={'px-1 ' + styles.overlay}>
+                    <img
+                      alt='armchair'
+                      className={'img-thumbnail img-fluid'}
+                      src={
+                        'https://i.postimg.cc/h4JH1pF7/ARCHIBALD-Armchair-with-headrest-By-Poltrona-Frau-design-Jean-Marie-Massaud.jpg'
+                      }
+                    />
+                  </div>
+                  <div className={'px-1 ' + styles.overlay}>
+                    <img
+                      alt='chair'
+                      className={'img-thumbnail img-fluid'}
+                      src={'https://i.postimg.cc/BbyYdWd1/Dywany-online.jpg'}
+                    />
+                  </div>
                   <div
                     onClick={() =>
                       itemsDisplayed < 5
