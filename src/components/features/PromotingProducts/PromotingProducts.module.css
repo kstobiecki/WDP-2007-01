@@ -1,5 +1,7 @@
 .leftSide {
-  width: 33%;
+  margin-right: 30px;
+  width: 45%;
+  min-width: 330px;
   margin-top: 30px;
   border: 2px solid #e1e1e1;
 }
@@ -164,7 +166,7 @@
 }
 
 .rightSide {
-  width: 65%;
+  width: 100%;
   margin-top: 30px;
 }
 
@@ -223,6 +225,24 @@
 }
 .iconWrapper:hover {
   background-color: #d58e32;
+}
+
+@media (max-width: 530px) {
+  .photoRight .textElements .title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 35px;
+    margin-bottom: 20px;
+  }
+  .photoRight .textElements .subtitle {
+    font-size: 15px;
+    margin-bottom: 50px;
+  }
+  .photoRight .textElements .buttonShopNow {
+    font-size: 13px;
+  }
 }
 
 /*# sourceMappingURL=PromotingProducts.module.css.map */
